@@ -18,11 +18,11 @@
       "id": "life-beyond-2d",
       "title": "Life Beyond 2D",
       "subtitle": "Ett celluniversum med 2–5 dimensioner.",
-      "description": "Utforska Conway och tre experimentella regelvärldar i en verklig 2D–5D-cellautomat. Vandra genom högre dimensioner med snittsliders.",
+      "description": "Utforska Conway och tre experimentella regelvärldar i en verklig 2D–5D-cellautomat. Vandra genom högre dimensioner med snittsliders. Källprojekt; använd life-lab för det gemensamma gränssnittet.",
       "path": "life-beyond-2d",
       "language": "HTML, CSS, JavaScript",
       "kind": "Cellulära automater",
-      "status": "experiment",
+      "status": "referens",
       "howToRun": "Öppna life-beyond-2d/index.html i webbläsaren. Inga beroenden eller byggsteg.",
       "hasLiveDemo": false
     },
@@ -30,12 +30,24 @@
       "id": "multidimension-life",
       "title": "Life Beyond Dimensions",
       "subtitle": "Game of Life i två, tre, fyra och fem dimensioner.",
-      "description": "Ett cellulärt universum där du växlar mellan 2D och 5D, utforskar skivor eller projektioner och hittar på helt egna födelse- och överlevnadsregler.",
+      "description": "Ett cellulärt universum där du växlar mellan 2D och 5D, utforskar skivor eller projektioner och hittar på helt egna födelse- och överlevnadsregler. Källprojekt; använd life-lab för det gemensamma gränssnittet.",
       "path": "multidimension-life",
       "language": "JavaScript (ES-moduler), HTML, CSS",
       "kind": "Cellautomatslaboratorium",
-      "status": "experiment",
+      "status": "referens",
       "howToRun": "Kör python3 -m http.server 8000 från repo-roten och öppna /multidimension-life/.",
+      "hasLiveDemo": false
+    },
+    {
+      "id": "life-lab",
+      "title": "Life Lab — Unified",
+      "subtitle": "Två Game of Life-motorer. Ett gränssnitt.",
+      "description": "Gemensam webbapp för egna B/S-regler, Conway, Echo, Bloom, Crystal, ärftliga mutationer och 3D–5D-hyperkubprojektioner.",
+      "path": "life-lab",
+      "language": "JavaScript ES modules, HTML, CSS",
+      "kind": "Cellautomatslaboratorium",
+      "status": "experiment",
+      "howToRun": "Starta python3 -m http.server 8000 i repo-roten och öppna /life-lab/.",
       "hasLiveDemo": false
     }
   ]
