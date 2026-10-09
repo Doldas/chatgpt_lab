@@ -49,5 +49,7 @@
       [this.data,this.buffer]=[this.buffer,this.data];this.population=pop;this.generation++;
     }
   }
-  root.LifeLab={Universe,limits,neighborsForDimension,SIDES};
-})(typeof module!=="undefined"&&module.exports?module.exports:window);
+  const api={Universe,limits,neighborsForDimension,SIDES};
+  if (typeof module!=="undefined" && module.exports) module.exports=api;
+  else root.LifeLab=api;
+})(typeof window!=="undefined"?window:{});
