@@ -16,7 +16,8 @@ Hjälpsajtens sektion **Se vad vi bygger** hämtar senaste PR:er och commits dir
 - **Varför:** Nya ChatGPT-sessioner och människor ska kunna förstå repot utan tidigare chattar. Repoägaren vill dessutom kunna **se vad AI-agenter gör**.
 - **Vad:** Byggde ett statiskt dokumentationssubprojekt `docs/`, projektkatalog, README- och AGENTS-instruktioner per delprojekt, överlämning för nya agenter och automatiska katalogkontroller.
 - **Insyn:** En publik aktivitetsvy i onlinehjälpen visar uppdaterade GitHub-PR:er och commits med direktlänkar till ändringarna. Ingen API-nyckel krävs. Den visar inte osparad kod eller privat modellresonemang.
-- **Granskning:** [PR #2](https://github.com/Doldas/chatgpt_lab/pull/2) – status måste kontrolleras i GitHub innan publicering eller fortsättning.
+- **Granskning:** [PR #2](https://github.com/Doldas/chatgpt_lab/pull/2) – mergad 2026-10-09. Den publika aktivitetsvyn med senaste PR:er och commits ingick där.
+- **Uppföljning:** [PR #3](https://github.com/Doldas/chatgpt_lab/pull/3) – arbetsjournal, PR-mall och tydliga transparensregler ligger för granskning.
 - **Testning:** Katalog- och dokumentationskontroller har validerats; JavaScript syntaxgranskats. GitHub Actions validerade dokumentationsreglerna på PR:en. Browser-test och GitHub Pages-drift återstår.
 - **Nästa steg:** Repoägaren granskar och mergar vid önskemål, aktiverar sedan GitHub Pages för `master /docs` eller hostar `docs/` på valfri statisk server.
 
