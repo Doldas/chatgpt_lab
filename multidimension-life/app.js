@@ -71,11 +71,14 @@ function draw() {
   ctx.fillStyle="#0b1928"; ctx.fillRect(0,0,canvas.width,canvas.height);
   const mode=modeInput.value;
   const view=project(world,depths,mode);
-  const maxOverlap=side**(world.dimensions-2);
+  // Stretch the projection's contrast: in 5D almost every XY position has cells.
+  // Normalizing between observed minimum and maximum reveals subtle density patterns.
+  let minOverlap=Infinity, maxOverlap=0;
+  for(const value of view) if(value>0){minOverlap=Math.min(minOverlap,value);maxOverlap=Math.max(maxOverlap,value);}
   for(let y=0;y<side;y++) for(let x=0;x<side;x++) {
     const n=view[y*side+x];
     if(!n)continue;
-    const intensity=Math.log1p(n)/Math.log1p(Math.max(2,maxOverlap));
+    const intensity=maxOverlap>minOverlap ? (n-minOverlap)/(maxOverlap-minOverlap) : .5;
     ctx.fillStyle=mode==="slice"
       ? "#65e3cb"
       : "hsla("+Math.round(185+65*intensity)+",86%,"+Math.round(43+24*intensity)+"%,.93)";
