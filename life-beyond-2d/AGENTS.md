@@ -13,6 +13,7 @@ Utforska cellulära automater i 2–5 dimensioner och helt nya regelverk. Experi
 ## Arkitektur och teknik
 
 - `simulation.js`: testbar, dimensionsgenerell, DOM-fri automatsimulering.
+- `evolution.js`: separat, DOM-fri evolverande automatsimulering med ärftliga regelpaket; måste förbli kompatibel med Universe-gränssnittet och renderarens datamodell.
 - `app.js`: canvas-ritning, visningslägen, kontroller och stoppbar tidsloop.
 - `renderer.js`: DOM-fri geometri, projektion från 2–5 dimensioner och 3D-snitt. Behåll API:t testbart och låt aldrig renderaren mutera simuleringens celler.
 - `index.html`: responsiv statisk sida utan externa paket.
@@ -33,4 +34,4 @@ Varje cell har `3^D - 1` omedelbara grannar på en D-dimensionell torus. Allt up
 
 ## Färdigställande
 
-När du ändrar regler: skriv ut intervallen, hur de beror på dimensioner och ett exempel. Uppdatera `README.md`, testsamlingen och vid behov `docs/projects.json`. Testa med `node --test tests/life.test.cjs`, kontrollera projektkatalogen och dokumentera manuell webbläsartestning i PR.
+När du ändrar regler eller arv: dokumentera regelintervall, dimensionernas inverkan, föräldravalsalgoritm, mutation och hur tester verifierar genotyper. Håll mutationer reproducerbara med injicerad RNG i tester. Uppdatera `README.md`, testsamlingen och vid behov `docs/projects.json`. Testa med `node --test tests/*.test.cjs`, kontrollera projektkatalogen och dokumentera manuell webbläsartestning i PR.
