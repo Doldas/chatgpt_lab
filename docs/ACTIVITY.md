@@ -55,6 +55,6 @@ Fyll i PR-mallen för **alla** PR:er. Lägg till en daterad post här för stör
 
 - **Varför:** Göra en liten reproducerbar poesimaskin av terminalens typografi: en postmyndighet för omöjliga adresser.
 - **Vad och var:** Nytt isolerat experiment i `framtidsposten/`: Python-generator, CLI, enhetstester, README och AGENTS. En enda ny post i `docs/projects.json`.
-- **Verifiering:** Enhetstesterna kan köras med `python3 -m unittest discover -s framtidsposten -p 'test_*.py'`; dokumentera faktiska körresultat i PR. Katalogens CI-kontroll utvärderas efter PR.
+- **Verifiering:** GitHub Actions [Framtidsposten tests, körning 1](https://github.com/Doldas/chatgpt_lab/actions/runs/37981827294) (enhetstester och CLI-smoke-test) **success**; [Validate lab documentation, körning 31](https://github.com/Doldas/chatgpt_lab/actions/runs/37981827097) **success**. Lokal körning kunde inte göras eftersom körmiljön inte kunde slå upp github.com; terminalrendering inte visuellt verifierad.
 - **Gränser:** Ingen nätverkstrafik, inga skrivningar eller bakgrundsjobb. Högst 20 märken per körning. Unicode-typografi kan se olika ut i olika terminaler.
 - **Granskning:** Branch `experiment/framtidsposten-20261009`; repoägaren avgör merge. Ingen publik demo utlovad.
