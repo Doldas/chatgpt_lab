@@ -50,3 +50,11 @@ Fyll i PR-mallen för **alla** PR:er. Lägg till en daterad post här för stör
 - **Verifiering:** JavaScript-syntax och katalogvalidering passerade. Kontroll med mockad DOM/tid verifierade tangentbordsdroppe, 60-droppsgräns, 48-ringgräns, manuell stoppknapp, rensa och stopp vid dold flik.
 - **Begränsningar:** Playwright-test kunde inte starta eftersom Chromium saknas i miljön. Visuell layout, faktisk ljudåtergivning och verkliga webbläsarhändelser återstår att kontrollera manuellt. Ingen publik demo är verifierad.
 - **Granskning och nästa steg:** Branch `experiment/regnorkestern-20261009`, separat PR. Repoägaren provar experimentet och beslutar om merge; inget mergas automatiskt.
+
+## 2026-10-09 – Framtidsposten
+
+- **Varför:** Göra en liten reproducerbar poesimaskin av terminalens typografi: en postmyndighet för omöjliga adresser.
+- **Vad och var:** Nytt isolerat experiment i `framtidsposten/`: Python-generator, CLI, enhetstester, README och AGENTS. En enda ny post i `docs/projects.json`.
+- **Verifiering:** Enhetstesterna kan köras med `python3 -m unittest discover -s framtidsposten -p 'test_*.py'`; dokumentera faktiska körresultat i PR. Katalogens CI-kontroll utvärderas efter PR.
+- **Gränser:** Ingen nätverkstrafik, inga skrivningar eller bakgrundsjobb. Högst 20 märken per körning. Unicode-typografi kan se olika ut i olika terminaler.
+- **Granskning:** Branch `experiment/framtidsposten-20261009`; repoägaren avgör merge. Ingen publik demo utlovad.
