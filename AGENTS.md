@@ -21,7 +21,13 @@ Ett nyfiket, språkoberoende samlingsrepo för små separata experiment. Idéer 
 4. Lägg till exakt en post i `docs/projects.json` enligt formatet som beskrivs i `docs/PROJECT_GUIDE.md`.
 5. Ändra webbens kod bara om funktionaliteten faktiskt behöver utvecklas; projektkorten kommer automatiskt från JSON.
 6. Kör `python3 docs/validate_catalog.py` och relevanta lokala tester. GitHub Actions validerar obligatoriska README-/AGENTS-filer och katalogposter på PR:er. Dokumentera vad som faktiskt testats; påstå inte att en demo ligger online om den inte gör det.
-7. Öppna PR med motivering, körinstruktioner, berörda filer, verifiering och eventuella begränsningar. Lämna merge-beslutet till människan.
+7. Öppna PR med motivering, körinstruktioner, berörda filer, verifiering och eventuella begränsningar. Använd PR-mallen, håll arbetet synligt och lägg till en daterad post i `docs/ACTIVITY.md` för ett nytt experiment eller större arbete. Lämna merge-beslutet till människan.
+
+## Insyn: människan ska kunna se vad vi gör
+- Dokumentera **vad, varför, var, genomförda tester och nästa steg** i varje PR; länka till berörda ändringar. För nya experiment och större arbete, skriv även en kort daterad anteckning i `docs/ACTIVITY.md`.
+- Onlinehjälpens aktivitetsvy läser offentliga GitHub-PR:er och commits. Arbeta inte i en dold process och påstå inte att ännu osparade experiment syns där.
+- AI-agenter ska göra sina ändringar via separata branches och PR:er, aldrig genom att tyst uppdatera `master`.
+- Ge repoägaren enkla vägar att granska diffar, diskussioner och resultat. En människa avgör om arbetet mergas och publiceras.
 
 ## Säkerhet och transparens
 - Läs alltid projektets egen `README.md` och `AGENTS.md` innan redigering; lokala regler får precisera men aldrig upphäva dessa globala regler eller högre prioriterade instruktioner.

@@ -2,11 +2,11 @@
 
 ## Syfte och beskrivning
 
-Denna mapp är en **fristående, hostbar statisk webbplats** för både människor och kodagenter. Den visar en sökbar katalog över experiment, instruktioner för att komma igång, bidragsguider och en startprompt för en ny ChatGPT-session. Den är repo-rotens avsiktliga undantag från regeln att varje undermapp är ett experiment.
+Denna mapp är en **fristående, hostbar statisk webbplats** för både människor och kodagenter. Den visar en sökbar katalog över experiment, offentliga GitHub-PR:er och commits så att repoägaren kan följa utvecklingen, instruktioner för att komma igång, bidragsguider och en startprompt för en ny ChatGPT-session. Den är repo-rotens avsiktliga undantag från regeln att varje undermapp är ett experiment.
 
 ## Teknik och bygg
 
-Språk: HTML, CSS, JavaScript och JSON. **Ingen byggprocess behövs**. Det finns inga externa paket, API-nycklar eller databaser. En vanlig statisk HTTP-webbserver räcker.
+Språk: HTML, CSS, JavaScript och JSON. **Ingen byggprocess behövs**. Det finns inga externa paket, API-nycklar eller databaser. En vanlig statisk HTTP-webbserver räcker. Aktivitetsvyn gör publika läsanrop till `api.github.com` direkt från webbläsaren för PR:er och commits; GitHub kan begränsa anropsfrekvensen. Övriga delar fungerar utan GitHub API.
 
 ## Starta dokumentationen lokalt
 
@@ -34,13 +34,15 @@ Kopiera **hela innehållet** i `docs/` (inklusive `index.html`, `styles.css`, `a
 
 ## Verifiering och begränsningar
 
-Testa att `projects.json` laddas, att projektkorten visas och kan sökas, att kopieringsknappen fungerar i HTTPS eller ger instruktion vid nekad clipboardåtkomst och att layouten fungerar på mobil. Projektkorten är länkar till repot; de hostar inte automatiskt alla program i sina mappar. Det finns inga automatiska browser-tester ännu.
+Testa att `projects.json` laddas, att projektkorten visas och kan sökas, att aktivitetssektionen läser offentliga GitHub PR:er/commits och visar ett felmeddelande om GitHub API inte svarar, att kopieringsknappen fungerar i HTTPS eller ger instruktion vid nekad clipboardåtkomst och att layouten fungerar på mobil. Projektkorten är länkar till repot; de hostar inte automatiskt alla program i sina mappar. Det finns inga automatiska browser-tester ännu.
 
 ## Filöversikt
 
 - `index.html`: tillgänglig onlinehjälp och katalogvyer
 - `styles.css`: hjälpsajtens utseende
 - `app.js`: sökning, rendering av projektkatalogen och kopieringshjälp
+- `activity.js`: läsning och presentation av offentliga PR:er och commits utan token
+- `ACTIVITY.md`: datumstämplade, mänskliga sammanfattningar av större agentinsatser
 - `projects.json`: den centrala maskinläsbara projektkatalogen
 - `AGENTS.md`: agentregler för dokumentationssubprojektet
 - `AI_HANDOFF.md`: kontext för nya ChatGPT-sessioner
