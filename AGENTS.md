@@ -20,7 +20,7 @@ Ett nyfiket, språkoberoende samlingsrepo för små separata experiment. Idéer 
 3. Skriv körbar kod, en lokal `README.md` med bygg- och körinstruktioner och en lokal `AGENTS.md` med agentens ansvarsområde, gränser och verifieringsregler. Håll experimentet litet, isolerat, begripligt och reversibelt.
 4. Lägg till exakt en post i `docs/projects.json` enligt formatet som beskrivs i `docs/PROJECT_GUIDE.md`.
 5. Ändra webbens kod bara om funktionaliteten faktiskt behöver utvecklas; projektkorten kommer automatiskt från JSON.
-6. Kontrollera syntax/tester och dokumentera vad som verkligen testats; påstå inte att en demo ligger online om den inte gör det.
+6. Kör `python3 docs/validate_catalog.py` och relevanta lokala tester. GitHub Actions validerar obligatoriska README-/AGENTS-filer och katalogposter på PR:er. Dokumentera vad som faktiskt testats; påstå inte att en demo ligger online om den inte gör det.
 7. Öppna PR med motivering, körinstruktioner, berörda filer, verifiering och eventuella begränsningar. Lämna merge-beslutet till människan.
 
 ## Säkerhet och transparens
