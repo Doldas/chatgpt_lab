@@ -39,6 +39,18 @@
       "status": "experiment",
       "howToRun": "Öppna regnorkestern/index.html i en modern webbläsare. Ingen installation behövs.",
       "hasLiveDemo": false
+    },
+    {
+      "id": "framtidsposten",
+      "title": "Framtidsposten",
+      "subtitle": "Frimärken från platser som ännu inte finns.",
+      "description": "En deterministisk poetisk postmyndighet som trycker terminalfrimärken av ett textfrö, med egna platser, motiv och absurda poststämplar.",
+      "path": "framtidsposten",
+      "language": "Python 3.9+",
+      "kind": "Generativ terminalkonst",
+      "status": "experiment",
+      "howToRun": "Kör python3 framtidsposten/stamps.py 'kaffe efter midnatt' i terminalen.",
+      "hasLiveDemo": false
     }
   ]
 }
