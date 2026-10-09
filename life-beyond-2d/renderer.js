@@ -71,7 +71,8 @@
     for(const {p,coords} of projected){
       const w=d>=4?coords[3]/Math.max(1,universe.side-1):0;
       const v=d>=5?coords[4]/Math.max(1,universe.side-1):0;
-      const hue=Math.round(180+165*w);
+      const index=universe.index(coords);
+      const hue=universe.mode==="evolving"?[180,45,300][universe.family[index]]:Math.round(180+165*w);
       ctx.globalAlpha=d>=5?(0.45+0.55*v):0.86;
       ctx.fillStyle="hsl("+hue+" 85% 68%)";
       ctx.beginPath();ctx.arc(p.x,p.y,radius*p.scale,0,Math.PI*2);ctx.fill();
