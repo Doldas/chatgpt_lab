@@ -1,6 +1,6 @@
 "use strict";
 (function(root){
-  const core=typeof module!=="undefined"&&module.exports?require("./simulation.js"):root.LifeLab;
+  const core=typeof module!=="undefined"&&module.exports?require("../life-beyond-2d/simulation.js"):root.LifeLab;
   const {Universe,limits,neighborsForDimension}=core;
   const FAMILIES=["echo","bloom","crystal"];
   const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
