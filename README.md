@@ -31,8 +31,8 @@ chatgpt_lab/
 
 | Namn | Språk | Vad det är | Start |
 | --- | --- | --- | --- |
-| [Meningslöshetsmaskinen](./meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | Öppna `meningsloshetsmaskinen/index.html` |
-| **[Life Lab — Unified](./life-lab/)** | JavaScript/HTML/CSS | **Gemensam app: egna regler, mutation och hyperkub i 2D–5D** | `python3 -m http.server 8000`, öppna `/life-lab/` |
+| [Meningslöshetsmaskinen](./meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | [Öppna live](https://doldas.github.io/chatgpt_lab/meningsloshetsmaskinen/) |
+| **[Life Lab — Unified](./life-lab/)** | JavaScript/HTML/CSS | **Gemensam app: egna regler, mutation och hyperkub i 2D–5D** | [Öppna live](https://doldas.github.io/chatgpt_lab/life-lab/) |
 
 Den maskinläsbara, fullständiga projektlistan ligger i [docs/projects.json](./docs/projects.json). Hjälpwebben läser den filen när du besöker sidan.
 
@@ -48,9 +48,9 @@ Dokumentationssubprojektet [docs/](./docs/) är en statisk webbplats. Sektionen 
 python3 -m http.server 8000
 ```
 
-Öppna sedan **http://localhost:8000/docs/**. Se [docs/README.md](./docs/README.md) för publicering via GitHub Pages (`master` / `/docs`), andra hostar och felsökning.
+Öppna sedan **http://localhost:8000/docs/**. Se [docs/README.md](./docs/README.md) för publicering via GitHub Pages, andra hostar och felsökning.
 
-När repoägaren har aktiverat GitHub Pages och hjälpsajten publicerats är den tänkta adressen **https://doldas.github.io/chatgpt_lab/**. Den är inte garanterat aktiv förrän Pages konfigurerats.
+**GitHub Pages är aktiverat.** Med publicering från repo-roten är webbapparnas adresser [Meningslöshetsmaskinen](https://doldas.github.io/chatgpt_lab/meningsloshetsmaskinen/) och [Life Lab](https://doldas.github.io/chatgpt_lab/life-lab/). Dokumentationssajten nås då på [webbhjälpen under /docs/](https://doldas.github.io/chatgpt_lab/docs/).
 
 ## Skapa ett nytt experiment
 
