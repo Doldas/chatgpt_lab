@@ -53,6 +53,10 @@ Testa att `projects.json` laddas, att projektkorten visas och kan sökas, att ak
 
 Dokumentationswebben har inga externa beroenden eller API-nycklar.
 
+## Kreativ startprompt
+
+På hjälpwebben finns en kopierbar prompt för nästa ChatGPT-session. Den ger agenten **uttryckligt mandat att själv välja och färdigställa ett nytt experiment**, även utan något praktiskt syfte. En agent ska läsa repo-regler och status, men om inget specifikt uppdrag anges ska den **inte stanna efter inventeringen och fråga vad som ska byggas**. Den ska välja ett rimligt avgränsat experiment och implementera, testa och föreslå resultatet via PR. Människan behåller beslut om merge, externa kostnader och andra riskfyllda åtgärder. Samma startprompt finns i `AI_HANDOFF.md`.
+
 ## Underhåll
 
 Uppdatera `projects.json` när ett nytt experiment läggs till. Kontrollera katalog och projektdokumentation från repo-roten med `python3 docs/validate_catalog.py`. GitHub Actions kör samma kontroll på PR:er och pushar till `master`. Skapa inte hårdkodade projektkort i `index.html`. Om `projects.json` inte laddas visas ett tydligt felmeddelande.
