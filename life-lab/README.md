@@ -2,19 +2,19 @@
 
 ## Syfte och beskrivning
 
-**Life Lab** sammanför två tidigare experiment i `chatgpt_lab` till **en enda webbaserad applikation och ett GUI**. Målet är att utforska emergens i 2D–5D, egenkonstruerade cellulära automatregler och ärftliga muterande cellregler. De ursprungliga experimenten finns kvar oförändrade för jämförelse och historik.
+**Life Lab** sammanför två tidigare experiment i `chatgpt_lab` till **en enda webbaserad applikation och ett GUI**. Målet är att utforska emergens i 2D–5D, egenkonstruerade cellulära automatregler och ärftliga muterande cellregler. De äldre experimenten är borttagna, men all nödvändig kod och alla tester finns nu i den här mappen. Git-historiken bevarar de gamla versionerna.
 
 ## Arkitektur och ursprung
 
 - `app.mjs`: gemensamt GUI och adapter mellan två beräkningsmotorer.
-- **Egna B/S-regler:** importerar den glesa, begränsade motorn från `../multidimension-life/engine.mjs` (experimentet från PR #4).
-- **Conway/Echo/Bloom/Crystal:** använder den dimensionella motorn från `../life-beyond-2d/simulation.js` (från PR #5).
+- **Egna B/S-regler:** importerar den glesa, begränsade motorn från `engine.mjs` (ursprungligen PR #4).
+- **Conway/Echo/Bloom/Crystal:** använder den dimensionella motorn från `simulation.js` (ursprungligen PR #5).
 - **Evolving:** `evolution.js` integrerar de ärftliga, muterande familjereglerna från PR #7.
 - **Hypercube Renderer:** `renderer.js` integrerar 2D–5D-hyperkubprojektionen från PR #6.
 - `index.html`, `style.css`: hostbar, fristående statisk webbapp.
 - Koden är kompatibel med webbläsare som stöder ES-moduler, Canvas och moderna JavaScript-funktioner.
 
-**Obs:** Även om PR #6 och #7 markerats som mergade på GitHub, gick de till experimentbrancher i stället för `master`. Därför har de saknade komponenterna lagts in explicit i denna integration.
+All kod som appen behöver ligger nu i `life-lab/`.
 
 ## Bygg och kör
 
@@ -28,7 +28,7 @@ python3 -m http.server 8000
 
 Öppna **http://localhost:8000/life-lab/**.
 
-För publicering: hosta **hela repo-strukturen** på en statisk HTTP(S)-server. Appen refererar till källkod från de två ursprungliga experimentmapparna, så att bara kopiera `life-lab/` fungerar **inte**.
+För publicering räcker det att hosta **enbart `life-lab/`** på en statisk HTTP(S)-server.
 
 ## GUI och funktioner
 
@@ -52,12 +52,11 @@ De två motorerna har olika rutnätsstorlekar och regler, så **byte av regelvä
 ## Tester
 
 - Kör befintliga tester:
-  - `node --test life-beyond-2d/tests/*.test.cjs` (originalmotor, på `master`).
-  - `node multidimension-life/engine.test.mjs` (egna B/S-regler).
-  - `node --test life-lab/tests/*.test.cjs` (nya integrerade renderings- och evolutionsmoduler).
+  - `node --test life-lab/tests/*.test.cjs` (originalmotor, integration, genetik, rendering).
+  - `node life-lab/tests/engine.test.mjs` (egna B/S-regler).
   - `python3 docs/validate_catalog.py` (projektstruktur).
 - Testa även manuellt i webbläsare: byt dimensioner/regler, prova båda kameralägen och 2D-målning, start/paus, mutation och felsvar för ogiltiga B/S-regler.
 
 ## Historiska projekt
 
-`life-beyond-2d/` och `multidimension-life/` behålls som fristående, dokumenterade experiment. **För nya användare rekommenderas `life-lab/`** där funktionerna nu möts.
+**`life-lab/` är den enda kvarvarande Game of Life-applikationen.** Gamla mappar är borttagna efter att deras motorer och tester flyttats hit; tidigare versioner finns i Git-historiken.
