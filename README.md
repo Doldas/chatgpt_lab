@@ -55,7 +55,7 @@ När repoägaren har aktiverat GitHub Pages och hjälpsajten publicerats är den
 2. Skapa koden i önskat språk med projektets egna beroenden.
 3. Skriv `README.md` med **syfte, beskrivning, bygga, köra, teknik, begränsningar och testning**.
 4. Skriv `AGENTS.md` med **agentens lokala instruktioner, vilka filer som får ändras och eventuella gränser**.
-5. Registrera experimentet i `docs/projects.json`.
+5. Registrera experimentet i `docs/projects.json` och kör `python3 docs/validate_catalog.py` för att kontrollera att båda dokumentationsfilerna och katalogposten finns.
 6. Följ [projektguiden](./docs/PROJECT_GUIDE.md). Föreslå ändringar via en separat branch och PR.
 
 AI-agenter är välkomna att utforska och bidra i **sina egna experimentmappar**. Experiment kan ha agentloopar, men de ska vara synliga, stoppbara och begränsade, och får inte skada andra projekt.
