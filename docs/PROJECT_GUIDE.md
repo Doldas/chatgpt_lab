@@ -14,26 +14,41 @@ chatgpt_lab/
 │   ├── app.js
 │   ├── projects.json         # En gemensam projektkatalog
 │   ├── README.md
+│   ├── AGENTS.md
 │   ├── AI_HANDOFF.md
 │   └── PROJECT_GUIDE.md
 ├── meningsloshetsmaskinen/    # Experiment 001
 │   ├── README.md
+│   ├── AGENTS.md
 │   └── index.html
 └── mitt-nya-experiment/       # Nästa oberoende miniprojekt
     ├── README.md
+    ├── AGENTS.md
     └── ...                   # Valfria språk/filer
 ```
 
 ## Krav per miniprojekt
 
-Varje ny toppnivåmapp för ett experiment ska ha `README.md` med:
+Varje ny toppnivåmapp för ett experiment ska ha **både `README.md` och `AGENTS.md`**. Dokumentationssubprojektet `docs/` följer samma krav.
+
+`README.md` måste förklara:
 
 1. **Vad:** idé, syfte eller lekfull frågeställning. Det får sakna nyttomål.
-2. **Teknik:** språk, versioner och eventuella beroenden.
+2. **Teknik och bygg:** språk, versioner, beroenden och **exakta byggsteg** eller tydligt besked att ingen byggning behövs.
 3. **Kör så här:** exakta kommandon eller steg, även om det bara är att öppna en HTML-fil.
 4. **Interaktion:** kontroller, indata/utdata och eventuella exempel.
 5. **Begränsningar:** vad som inte fungerar ännu, eventuell nätverks- eller kostnadspåverkan.
 6. **Verifiering:** tester/kontroller eller vad som ännu inte testats.
+
+`AGENTS.md` måste ange:
+
+1. **Uppdrag:** projektets syfte och vilken sorts experiment som är tillåtet.
+2. **Arbetsyta:** vilka filer agenten får ändra och vilka andra projekt den inte ska röra.
+3. **Teknik:** hur agenten bygger, kör och testar projektet.
+4. **Självständighet:** gränser, kostnader, externa anrop och stoppbara loopar.
+5. **Överlämning:** dokumentationskrav, vad agenten ska verifiera och hur den lämnar en PR för mänsklig granskning.
+
+Håll instruktionerna lokala till respektive projekt. Repo-rotens `AGENTS.md` gäller alltid som gemensam policy.
 
 ## Registrera i hjälpkatalogen
 
@@ -59,7 +74,7 @@ Lägg till `liveUrl` (https-länk) **endast** om `hasLiveDemo` är sant. Lägg a
 1. Läs aktuella instruktioner och projektkatalogen.
 2. Skapa en unik ny mapp. Ändra inte andra experiment i onödan.
 3. Implementera litet och verifierbart, utan hemligheter eller tvingande beroenden för övriga projekt.
-4. Skriv projektets README och uppdatera `docs/projects.json`.
+4. Skriv **både projektets `README.md` och `AGENTS.md`**, och uppdatera `docs/projects.json`.
 5. Kontrollera t.ex. JSON-syntax, länkar, tester och dokumentation.
 6. Skicka PR på separat branch. Ange vad som är testat och inte testat.
 
