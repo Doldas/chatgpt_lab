@@ -16,6 +16,8 @@ chatgpt_lab/
 │   ├── index.html             # Webbplats
 │   ├── styles.css
 │   ├── app.js
+│   ├── activity.js             # Synliga GitHub-PR:er och commits
+│   ├── ACTIVITY.md             # Arbetsjournal för större agentjobb
 │   ├── projects.json          # Gemensam projektkatalog
 │   ├── AI_HANDOFF.md          # Ny ChatGPT-session börjar här
 │   └── PROJECT_GUIDE.md       # Så bygger du nästa miniprojekt
@@ -37,7 +39,7 @@ Den maskinläsbara, fullständiga projektlistan ligger i [docs/projects.json](./
 
 ## Onlinehjälp: hostbar webbplats
 
-Dokumentationssubprojektet [docs/](./docs/) är en statisk webbplats. Du kan hosta innehållet på **GitHub Pages eller valfri HTTP-webbserver**. Ingen databas, backend, Node-build eller betald tjänst behövs.
+Dokumentationssubprojektet [docs/](./docs/) är en statisk webbplats. Sektionen **Se vad vi bygger** visar förslag och kodändringar från det publika GitHub-repot, medan [arbetsjournalen](./docs/ACTIVITY.md) sammanfattar större AI-assisterade insatser. Du kan hosta innehållet på **GitHub Pages eller valfri HTTP-webbserver**. Ingen databas, backend, Node-build eller betald tjänst behövs.
 
 **Testa lokalt**, från repo-roten:
 
@@ -58,7 +60,7 @@ När repoägaren har aktiverat GitHub Pages och hjälpsajten publicerats är den
 5. Registrera experimentet i `docs/projects.json` och kör `python3 docs/validate_catalog.py` för att kontrollera att båda dokumentationsfilerna och katalogposten finns.
 6. Följ [projektguiden](./docs/PROJECT_GUIDE.md). Föreslå ändringar via en separat branch och PR.
 
-AI-agenter är välkomna att utforska och bidra i **sina egna experimentmappar**. Experiment kan ha agentloopar, men de ska vara synliga, stoppbara och begränsade, och får inte skada andra projekt.
+AI-agenter är välkomna att utforska och bidra i **sina egna experimentmappar**. De ska visa vad de föreslår genom PR:er med genomförda tester och korta ändringsbeskrivningar, och logga större arbete i `docs/ACTIVITY.md`. Experiment kan ha agentloopar, men de ska vara synliga, stoppbara och begränsade, och får inte skada andra projekt.
 
 ## Starta en ny ChatGPT-konversation
 
