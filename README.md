@@ -48,8 +48,11 @@ chatgpt_lab/
 | [Meningslöshetsmaskinen](./meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | Öppna `meningsloshetsmaskinen/index.html` |
 | [Life Beyond 2D](./life-beyond-2d/) | HTML/CSS/JavaScript | 2D–5D automat, hyperkubexperiment | Öppna `life-beyond-2d/index.html` |
 | [Life Beyond Dimensions](./multidimension-life/) | JavaScript/HTML/CSS | Fristående 2D–5D-automat med egna regler | `python3 -m http.server 8000`, öppna `/multidimension-life/` |
+| **[Life Lab — Unified](./life-lab/)** | JavaScript/HTML/CSS | **Gemensam app: egna regler, mutation och hyperkub i 2D–5D** | `python3 -m http.server 8000`, öppna `/life-lab/` |
 
 Den maskinläsbara, fullständiga projektlistan ligger i [docs/projects.json](./docs/projects.json). Hjälpwebben läser den filen när du besöker sidan.
+
+**Rekommenderat Game of Life-projekt:** [Life Lab — Unified](./life-lab/). De två tidigare projekten finns kvar som referenser; Life Lab samlar funktionerna i samma GUI.
 
 ## Onlinehjälp: hostbar webbplats
 

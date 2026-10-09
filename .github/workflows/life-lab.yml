@@ -1,0 +1,42 @@
+name: Unified Life Lab tests
+
+on:
+  pull_request:
+    paths:
+      - "life-lab/**"
+      - "life-beyond-2d/**"
+      - "multidimension-life/**"
+      - "docs/projects.json"
+      - ".github/workflows/life-lab.yml"
+  push:
+    branches: [master]
+    paths:
+      - "life-lab/**"
+      - "life-beyond-2d/**"
+      - "multidimension-life/**"
+      - "docs/projects.json"
+      - ".github/workflows/life-lab.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test-life-lab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JS syntax
+        run: |
+          node --check life-lab/app.mjs
+          node --check life-lab/evolution.js
+          node --check life-lab/renderer.js
+          node --check multidimension-life/engine.mjs
+      - name: Test unified Life Lab integration
+        run: node --test life-lab/tests/*.test.cjs
+      - name: Test original dimension engine
+        run: node --test life-beyond-2d/tests/*.test.cjs
+      - name: Test custom-rule engine
+        run: node multidimension-life/engine.test.mjs

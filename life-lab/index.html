@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Life Lab — 2D till 5D · chatgpt_lab</title>
+<meta name="description" content="Ett gemensamt Game of Life-labb: egna regler, mutationer och hyperkubprojektioner i 2–5 dimensioner.">
+<link rel="stylesheet" href="./style.css">
+<script src="../life-beyond-2d/simulation.js"></script><script src="./evolution.js"></script><script src="./renderer.js"></script><script type="module" src="./app.mjs"></script>
+</head><body><main>
+<header><a href="../docs/">✳ chatgpt_lab / dokumentation</a><span>EXPERIMENT 002 + 003 → ETT LABB</span></header>
+<section class="hero"><div><p class="eyebrow">Cellular universes · 2D–5D</p><h1>Life <em>Lab.</em></h1><p>Två Game of Life-experiment, ett gränssnitt. Skriv egna naturlagar, utforska mutationer och växla mellan 2D-snitt, 3D-rum och hyperkubprojektioner.</p></div><div class="hero-icon" aria-hidden="true">✳</div></section>
+<div class="layout">
+<section class="panel controls" aria-label="Simuleringsinställningar">
+<h2>Universum</h2>
+<label for="dimensions">Dimensioner <output id="dimension-label">2D</output></label><input id="dimensions" type="range" min="2" max="5" step="1" value="2">
+<label for="rule">Regelvärld</label>
+<select id="rule"><option value="custom">Egna regler – B/S</option><option value="conway">Conway B3/S23 (endast 2D)</option><option value="echo">Echo</option><option value="bloom">Bloom</option><option value="crystal">Crystal</option><option value="evolving">Evolving – ärftliga regler</option></select>
+<div class="dual"><div><label for="birth">Födelse B</label><input id="birth" value="3" autocomplete="off"></div><div><label for="survive">Överlevnad S</label><input id="survive" value="2,3" autocomplete="off"></div></div>
+<p class="hint">Egna regler: separera antal med kommatecken eller intervall, till exempel <code>3,5-7</code>.</p>
+<button id="apply" class="small">Tillämpa B/S</button>
+<label for="mutation">Mutation vid födelse <output id="mutation-label">4%</output></label><input id="mutation" type="range" min="0" max="30" value="4">
+<p id="rule-info" class="hint" aria-live="polite"></p>
+<div class="separator"></div><h2>Visa universum</h2>
+<label for="view">Kamera</label><select id="view"><option value="outside">Utifrån – hel hyperkub</option><option value="slice">Inifrån – 3D-snitt</option><option value="flat">2D-snitt – måla</option></select>
+<div id="axes"></div>
+<label for="rotation">Högdimensionell rotation <output id="rotation-label">30°</output></label><input id="rotation" type="range" min="0" max="360" step="5" value="30">
+<label for="tilt">3D-lutning <output id="tilt-label">25°</output></label><input id="tilt" type="range" min="-90" max="90" step="5" value="25">
+<label class="check"><input type="checkbox" id="edges" checked> Visa wireframe-kanter</label>
+<div class="separator"></div>
+<label for="density">Starttäthet <output id="density-label">17%</output></label><input id="density" type="range" min="2" max="40" value="17">
+<label for="speed">Hastighet <output id="speed-label">4</output> steg/s</label><input id="speed" type="range" min="1" max="8" value="4">
+<div class="buttons"><button id="play" class="primary">▶ Starta</button><button id="step">↷ Ett steg</button><button id="random">✳ Slumpstart</button><button id="clear">⌫ Rensa</button></div>
+<p class="hint">Auto-körning stannar efter högst 80 generationer per start. Stoppa när du vill. Världen startas om vid byte av motor eller dimension.</p>
+</section>
+<section class="panel stage" aria-label="Visualisering"><div class="stage-top"><div><span class="eyebrow">LIVE SIMULATION</span><h2>En värld, flera perspektiv</h2></div><span id="status" role="status" aria-live="polite">Pausad</span></div>
+<canvas id="canvas" width="750" height="750" tabindex="0" role="img" aria-label="Game of Life-värld. I 2D-snittläge kan du klicka och dra för att måla."></canvas>
+<div class="stats"><span id="generation">Generation 0</span><span id="population">0 levande</span><span id="visible">Synliga: 0</span><span id="neighbors">8 grannar/cell</span><span id="volume">— celler</span></div>
+<p id="interpretation" class="hint">Utifrån visar alla levande celler projicerade från den valda dimensionen. Inifrån visar ett XYZ-snitt. 2D-snitt låter dig måla själv.</p>
+<div class="legend"><span><i style="background:#53c6da"></i> Echo</span><span><i style="background:#e5bc42"></i> Bloom</span><span><i style="background:#c984e6"></i> Crystal</span></div>
+</section></div>
+<footer><p><strong>Life Lab.</strong> All matematik körs lokalt i webbläsaren. Inga externa paket, konton eller API-anrop. 4D/5D visas som matematiska projektioner, inte bokstavlig högdimensionell syn.</p><a href="./README.md">Läs bygge, tester och regelverk →</a></footer>
+</main></body></html>
