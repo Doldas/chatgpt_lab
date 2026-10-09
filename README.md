@@ -8,35 +8,21 @@ Här får idéer undersökas, lekas med och byggas till små projekt — ibland 
 
 ```text
 chatgpt_lab/
-├── README.md                  # Du är här: repots mänskliga introduktion
-├── AGENTS.md                  # Globalt kontrakt för AI-agenter
-├── docs/                      # EGET SUBPROJEKT: hostbar onlinehjälp
-│   ├── README.md              # Bygg, kör och hosta hjälpwebben
-│   ├── AGENTS.md              # Agentinstruktioner för dokumentationen
-│   ├── index.html             # Webbplats
-│   ├── styles.css
-│   ├── app.js
-│   ├── activity.js             # Synliga GitHub-PR:er och commits
-│   ├── ACTIVITY.md             # Arbetsjournal för större agentjobb
-│   ├── projects.json          # Gemensam projektkatalog
-│   ├── AI_HANDOFF.md          # Ny ChatGPT-session börjar här
-│   └── PROJECT_GUIDE.md       # Så bygger du nästa miniprojekt
-├── meningsloshetsmaskinen/     # Experiment 001
-│   ├── README.md              # Syfte, beskrivning, bygg/kör, test
-│   ├── AGENTS.md              # Projektets agentinstruktioner
-│   └── index.html
-├── life-beyond-2d/           # Experiment 002: 2–5D
-│   ├── README.md
-│   ├── AGENTS.md
-│   └── index.html
-└── multidimension-life/      # Separat 2–5D regel-laboratorium
+├── README.md
+├── AGENTS.md
+├── docs/                     # Dokumentation och onlinehjälp
+├── meningsloshetsmaskinen/    # Konstexperiment
+└── life-lab/                 # Enda Game of Life-appen
     ├── README.md
     ├── AGENTS.md
+    ├── index.html
+    ├── app.mjs
     ├── engine.mjs
-    ├── engine.test.mjs
-    ├── app.js
+    ├── simulation.js
+    ├── evolution.js
+    ├── renderer.js
     ├── style.css
-    └── index.html
+    └── tests/
 ```
 
 **Regel:** Varje ny toppnivåmapp för ett experiment har en egen `README.md` och `AGENTS.md`. `docs/` är dokumentationssubprojektet och följer samma dokumentationskrav, men listas inte som experiment i katalogen.
@@ -46,13 +32,11 @@ chatgpt_lab/
 | Namn | Språk | Vad det är | Start |
 | --- | --- | --- | --- |
 | [Meningslöshetsmaskinen](./meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | Öppna `meningsloshetsmaskinen/index.html` |
-| [Life Beyond 2D](./life-beyond-2d/) | HTML/CSS/JavaScript | 2D–5D automat, hyperkubexperiment | Öppna `life-beyond-2d/index.html` |
-| [Life Beyond Dimensions](./multidimension-life/) | JavaScript/HTML/CSS | Fristående 2D–5D-automat med egna regler | `python3 -m http.server 8000`, öppna `/multidimension-life/` |
 | **[Life Lab — Unified](./life-lab/)** | JavaScript/HTML/CSS | **Gemensam app: egna regler, mutation och hyperkub i 2D–5D** | `python3 -m http.server 8000`, öppna `/life-lab/` |
 
 Den maskinläsbara, fullständiga projektlistan ligger i [docs/projects.json](./docs/projects.json). Hjälpwebben läser den filen när du besöker sidan.
 
-**Rekommenderat Game of Life-projekt:** [Life Lab — Unified](./life-lab/). De två tidigare projekten finns kvar som referenser; Life Lab samlar funktionerna i samma GUI.
+**Rekommenderat Game of Life-projekt:** [Life Lab — Unified](./life-lab/). De tidigare Game of Life-mapparna är borttagna; deras motorer och tester ligger nu direkt i Life Lab.
 
 ## Onlinehjälp: hostbar webbplats
 
