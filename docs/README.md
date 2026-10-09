@@ -18,15 +18,17 @@ python3 -m http.server 8000
 
 Öppna sedan `http://localhost:8000/docs/`. En lokal HTTP-server behövs eftersom webbsidan läser `projects.json` med `fetch`, vilket ofta blockeras via `file://`.
 
-## Publicera hjälpen online på GitHub Pages
+## Publicerade adresser via GitHub Pages
 
-Efter att ändringarna mergats till `master`:
-1. Öppna **Settings → Pages** i GitHub-repot.
-2. Välj **Build and deployment → Deploy from a branch**.
-3. Välj branch **master** och folder **/docs**, spara.
-4. När GitHub Pages har publicerat bör hjälpen gå att besöka på **https://doldas.github.io/chatgpt_lab/**.
+Repoägaren har aktiverat GitHub Pages. När webbplatsen publiceras från **master / (root)** nås resurserna på följande adresser:
 
-Detta är en **förväntad adress, inte en verifierad driftsatt sida**. Publicering och första byggning kan behöva aktiveras av repoägaren. Hjälpsajten är då publik. Själva experimentens källkod ligger fortfarande i sina egna rotmappar och blir inte automatiskt körbara på Pages.
+- [Meningslöshetsmaskinen](https://doldas.github.io/chatgpt_lab/meningsloshetsmaskinen/) – bekräftad av repoägaren.
+- [Life Lab](https://doldas.github.io/chatgpt_lab/life-lab/) – motsvarande appadress enligt samma rotstruktur.
+- [Dokumentation och projektkatalog](https://doldas.github.io/chatgpt_lab/docs/) – onlinehjälpen ligger i `docs/`.
+
+GitHub Pages-konfigurationen ska vara **Deploy from a branch → master → /(root)** om både appmappar och dokumentationen ska kunna nås direkt. Använd **inte /docs** som Pages-publiceringsrot i detta läge, eftersom länkar till apparna annars inte publiceras via samma plats.
+
+Länkarna är adresserna för denna Pages-struktur. I den här uppdateringen kunde GitHub Pages-HTTP-svaren inte verifieras automatiskt; kontrollera särskilt Life Lab och dokumentationen manuellt.
 
 ## Hosta på valfri webbserver
 

@@ -26,7 +26,7 @@ Från repo-roten:
 python3 -m http.server 8000
 ```
 
-Öppna **http://localhost:8000/life-lab/**.
+Öppna **http://localhost:8000/life-lab/**. På GitHub Pages är appens adress **https://doldas.github.io/chatgpt_lab/life-lab/** (under förutsättning att publicering sker från repo-roten).
 
 För publicering räcker det att hosta **enbart `life-lab/`** på en statisk HTTP(S)-server.
 
