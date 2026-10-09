@@ -19,8 +19,8 @@ test("evolving universe is compatible with Life simulation and visualization",()
 test("lineages are inherited by new cells and evolve only when permitted",()=>{
  const u=new EvolvingUniverse(2,{mutationRate:0,rng:()=>0});
  u.clear();
- // Echo needs three births in 2D. A stable three-cell local seed
- for(const [x,y] of [[14,15],[15,14],[16,15]])u.set([x,y],1);
+ // Bloom requires two neighbors in 2D. An L-shaped parent pair
+ for(const [x,y] of [[14,15],[15,14]])u.set([x,y],1);
  u.family.fill(1); // Bloom: B2/S1-2 in 2D.
  u.step();
  assert.equal(u.get([15,15]),1);
@@ -31,7 +31,7 @@ test("lineages are inherited by new cells and evolve only when permitted",()=>{
 test("forced mutation can modify the inherited birth rule",()=>{
  const u=new EvolvingUniverse(2,{mutationRate:1,rng:()=>0});
  u.clear();
- for(const [x,y] of [[14,15],[15,14],[16,15]])u.set([x,y],1);
+ for(const [x,y] of [[14,15],[15,14]])u.set([x,y],1);
  u.family.fill(1);
  u.step();
  assert.equal(u.get([15,15]),1);
