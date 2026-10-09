@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "repository": "Doldas/chatgpt_lab",
+  "projects": [
+    {
+      "id": "meningsloshetsmaskinen",
+      "title": "Meningslöshetsmaskinen",
+      "subtitle": "Kasta färg utan att försöka lyckas.",
+      "description": "Ett lekfullt experiment med en vit målarduk, slumpstyrda färgfläckar och en avsiktligt stoppbar loop.",
+      "path": "meningsloshetsmaskinen",
+      "language": "HTML, CSS, JavaScript",
+      "kind": "Kreativt webblabb",
+      "status": "experiment",
+      "howToRun": "Öppna meningsloshetsmaskinen/index.html direkt i en modern webbläsare.",
+      "hasLiveDemo": false
+    }
+  ]
+}
