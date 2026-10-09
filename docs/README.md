@@ -1,6 +1,12 @@
 # Onlinehjälpen – dokumentation som eget miniprojekt
 
-Denna mapp är en **fristående, statisk webbplats** för både människor och kodagenter. Den är repo-rotens avsiktliga undantag från regeln att varje undermapp är ett experiment.
+## Syfte och beskrivning
+
+Denna mapp är en **fristående, hostbar statisk webbplats** för både människor och kodagenter. Den visar en sökbar katalog över experiment, instruktioner för att komma igång, bidragsguider och en startprompt för en ny ChatGPT-session. Den är repo-rotens avsiktliga undantag från regeln att varje undermapp är ett experiment.
+
+## Teknik och bygg
+
+Språk: HTML, CSS, JavaScript och JSON. **Ingen byggprocess behövs**. Det finns inga externa paket, API-nycklar eller databaser. En vanlig statisk HTTP-webbserver räcker.
 
 ## Starta dokumentationen lokalt
 
@@ -22,12 +28,21 @@ Efter att ändringarna mergats till `master`:
 
 Detta är en **förväntad adress, inte en verifierad driftsatt sida**. Publicering och första byggning kan behöva aktiveras av repoägaren. Hjälpsajten är då publik. Själva experimentens källkod ligger fortfarande i sina egna rotmappar och blir inte automatiskt körbara på Pages.
 
+## Hosta på valfri webbserver
+
+Kopiera **hela innehållet** i `docs/` (inklusive `index.html`, `styles.css`, `app.js` och `projects.json`) till den katalog som ska vara webbplatsens rot, eller en önskad underkatalog. Servern ska leverera statiska filer över HTTP(S) och JSON som läsbar text. Webbplatsen använder relativa filvägar och fungerar därmed också bakom en underkatalog. Efter publicering behöver du kontrollera att projektkatalogen laddas och att länkarna till GitHub fungerar.
+
+## Verifiering och begränsningar
+
+Testa att `projects.json` laddas, att projektkorten visas och kan sökas, att kopieringsknappen fungerar i HTTPS eller ger instruktion vid nekad clipboardåtkomst och att layouten fungerar på mobil. Projektkorten är länkar till repot; de hostar inte automatiskt alla program i sina mappar. Det finns inga automatiska browser-tester ännu.
+
 ## Filöversikt
 
 - `index.html`: tillgänglig onlinehjälp och katalogvyer
 - `styles.css`: hjälpsajtens utseende
 - `app.js`: sökning, rendering av projektkatalogen och kopieringshjälp
 - `projects.json`: den centrala maskinläsbara projektkatalogen
+- `AGENTS.md`: agentregler för dokumentationssubprojektet
 - `AI_HANDOFF.md`: kontext för nya ChatGPT-sessioner
 - `PROJECT_GUIDE.md`: skapande och dokumentation av experiment
 
