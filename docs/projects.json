@@ -13,6 +13,18 @@
       "status": "experiment",
       "howToRun": "Öppna meningsloshetsmaskinen/index.html direkt i en modern webbläsare.",
       "hasLiveDemo": false
+    },
+    {
+      "id": "life-beyond-2d",
+      "title": "Life Beyond 2D",
+      "subtitle": "Ett celluniversum med 2–5 dimensioner.",
+      "description": "Utforska Conway och tre experimentella regelvärldar i en verklig 2D–5D-cellautomat. Vandra genom högre dimensioner med snittsliders.",
+      "path": "life-beyond-2d",
+      "language": "HTML, CSS, JavaScript",
+      "kind": "Cellulära automater",
+      "status": "experiment",
+      "howToRun": "Öppna life-beyond-2d/index.html i webbläsaren. Inga beroenden eller byggsteg.",
+      "hasLiveDemo": false
     }
   ]
 }
