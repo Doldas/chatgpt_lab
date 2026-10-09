@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import {SIZES, makeWorld, updateCell, stepWorld, encode, decode, neighborCount,
-  neighborOffsets, ruleFor, parseCounts, project} from "./engine.mjs";
+  neighborOffsets, ruleFor, parseCounts, project} from "../engine.mjs";
 
 const blinker=makeWorld(2,1,false);
 for(const point of [[4,5],[5,5],[6,5]]) updateCell(blinker,point);

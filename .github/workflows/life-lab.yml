@@ -4,16 +4,12 @@ on:
   pull_request:
     paths:
       - "life-lab/**"
-      - "life-beyond-2d/**"
-      - "multidimension-life/**"
       - "docs/projects.json"
       - ".github/workflows/life-lab.yml"
   push:
     branches: [master]
     paths:
       - "life-lab/**"
-      - "life-beyond-2d/**"
-      - "multidimension-life/**"
       - "docs/projects.json"
       - ".github/workflows/life-lab.yml"
 
@@ -33,10 +29,9 @@ jobs:
           node --check life-lab/app.mjs
           node --check life-lab/evolution.js
           node --check life-lab/renderer.js
-          node --check multidimension-life/engine.mjs
+          node --check life-lab/engine.mjs
+          node --check life-lab/simulation.js
       - name: Test unified Life Lab integration
         run: node --test life-lab/tests/*.test.cjs
-      - name: Test original dimension engine
-        run: node --test life-beyond-2d/tests/*.test.cjs
       - name: Test custom-rule engine
-        run: node multidimension-life/engine.test.mjs
+        run: node life-lab/tests/engine.test.mjs

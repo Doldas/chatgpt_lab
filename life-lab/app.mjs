@@ -1,4 +1,4 @@
-import {makeWorld,makeRandom,ruleFor,parseCounts,formatCounts,stepWorld,updateCell,encode,decode,neighborCount} from "../multidimension-life/engine.mjs";
+import {makeWorld,makeRandom,ruleFor,parseCounts,formatCounts,stepWorld,updateCell,encode,decode,neighborCount} from "./engine.mjs";
 const {Universe}=window.LifeLab;
 const {EvolvingUniverse,FAMILIES}=window.LifeEvolution;
 const renderer=window.HypercubeRenderer;

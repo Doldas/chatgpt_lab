@@ -21,6 +21,15 @@ Hjälpsajtens sektion **Se vad vi bygger** hämtar senaste PR:er och commits dir
 - **Testning:** Katalog- och dokumentationskontroller har validerats; JavaScript syntaxgranskats. GitHub Actions validerade dokumentationsreglerna på PR:en. Browser-test och GitHub Pages-drift återstår.
 - **Nästa steg:** Repoägaren granskar och mergar vid önskemål, aktiverar sedan GitHub Pages för `master /docs` eller hostar `docs/` på valfri statisk server.
 
+
+## 2026-10-09 – Life Lab som enda Game of Life-projekt
+
+- **Varför:** Repoägaren föredrar Life Lab och vill inte ha flera överlappande Game of Life-appar.
+- **Vad:** Flyttade `simulation.js`, `engine.mjs` och testerna till `life-lab/`, uppdaterade importer, tog bort de två äldre Life-mapparna och uppdaterade projektkatalog och CI.
+- **Granskning:** [PR #11](https://github.com/Doldas/chatgpt_lab/pull/11). De äldre projektens historik finns kvar i Git.
+- **Omfattning:** `meningsloshetsmaskinen/` och dokumentationswebben behålls.
+- **Verifiering:** GitHub Actions och eventuella manuella kontroller redovisas i PR:en.
+
 ## Så dokumenterar nästa agent sitt arbete
 
 För varje ändring som föreslås via PR:

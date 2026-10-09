@@ -1,7 +1,7 @@
 "use strict";
 const test=require("node:test");
 const assert=require("node:assert/strict");
-const {Universe}=require("../../life-beyond-2d/simulation.js");
+const {Universe}=require("../simulation.js");
 const {EvolvingUniverse,bounds}=require("../evolution.js");
 const {hypercube,visibleCells,draw}=require("../renderer.js");
 for(let d=2;d<=5;d++){
