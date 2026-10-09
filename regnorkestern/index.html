@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="sv">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regnorkestern</title>
+<link rel="stylesheet" href="style.css">
+<main>
+  <header><p class="eyebrow">ETT LITET VÄDER UTAN PROGNOS</p><h1>Regnorkestern<span>.</span></h1><p>Kasta en droppe. Lyssna på en ring. Låt vädret improvisera.</p></header>
+  <section class="water" aria-label="Interaktiv vattenyta">
+    <canvas id="pond" tabindex="0" role="button" aria-label="Skapa en regndroppe. Klicka, eller tryck Enter eller mellanslag."></canvas>
+    <span class="hint" aria-hidden="true">KLICK / TOUCH / MELLANSLAG</span>
+  </section>
+  <div class="controls"><button id="rain" aria-pressed="false">Starta regn</button><button id="sound" aria-pressed="false">Slå på ljud</button><button id="clear">Rensa</button><label for="tempo">Droppintervall <output id="interval">450 ms</output><input id="tempo" type="range" min="150" max="1000" step="50" value="450"></label></div>
+  <p id="status" role="status">Tyst vatten. Ljud är valfritt.</p>
+  <footer><span>Pentatoniskt regn · Allt händer i din webbläsare</span><span>Max 60 automatiska droppar per omgång</span></footer>
+</main>
+<script src="app.js"></script>
+</html>

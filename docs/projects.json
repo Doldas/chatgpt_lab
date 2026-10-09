@@ -27,6 +27,18 @@
       "howToRun": "Öppna https://doldas.github.io/chatgpt_lab/life-lab/ direkt i webbläsaren.",
       "hasLiveDemo": true,
       "liveUrl": "https://doldas.github.io/chatgpt_lab/life-lab/"
+    },
+    {
+      "id": "regnorkestern",
+      "title": "Regnorkestern",
+      "subtitle": "Låt regnet improvisera en melodi.",
+      "description": "En nattblå vattenyta med klickbara ringar, valfria pentatoniska toner och ett stoppbart regn med högst 60 droppar.",
+      "path": "regnorkestern",
+      "language": "HTML, CSS, JavaScript",
+      "kind": "Visuellt ljudexperiment",
+      "status": "experiment",
+      "howToRun": "Öppna regnorkestern/index.html i en modern webbläsare. Ingen installation behövs.",
+      "hasLiveDemo": false
     }
   ]
 }

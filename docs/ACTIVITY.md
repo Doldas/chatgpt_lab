@@ -42,3 +42,11 @@ För varje ändring som föreslås via PR:
 6. **Utfall:** När något har mergats, förklara hur man kör eller tittar på det.
 
 Fyll i PR-mallen för **alla** PR:er. Lägg till en daterad post här för större arbete och alla nya experiment. Håll loggen kort och begriplig. Låt bara PR och commits visa faktisk GitHub-aktivitet; skriv aldrig att en agent arbetar i bakgrunden när den inte gör det.
+
+## 2026-10-09 – Regnorkestern
+
+- **Varför:** Utforska regn som en lekfull pentatonisk ljudbild utan prestationsmål.
+- **Vad och var:** Nytt isolerat experiment i `regnorkestern/`, med Canvas-ringar, valfritt Web Audio-ljud och högst 60 automatiska droppar. Egen README/AGENTS och en post i projektkatalogen.
+- **Verifiering:** JavaScript-syntax och katalogvalidering passerade. Kontroll med mockad DOM/tid verifierade tangentbordsdroppe, 60-droppsgräns, 48-ringgräns, manuell stoppknapp, rensa och stopp vid dold flik.
+- **Begränsningar:** Playwright-test kunde inte starta eftersom Chromium saknas i miljön. Visuell layout, faktisk ljudåtergivning och verkliga webbläsarhändelser återstår att kontrollera manuellt. Ingen publik demo är verifierad.
+- **Granskning och nästa steg:** Branch `experiment/regnorkestern-20261009`, separat PR. Repoägaren provar experimentet och beslutar om merge; inget mergas automatiskt.
