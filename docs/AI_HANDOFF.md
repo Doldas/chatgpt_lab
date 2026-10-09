@@ -24,7 +24,7 @@ Ett tidigt samtal handlade om Skynet, alignment, värdet av mänsklig spontanite
 3. Kontrollera aktuella branches och PR:er innan du antar något om status. Säg till om något saknas eller har förändrats.
 4. Om användaren vill skapa något: välj **ett** rimligt fristående experiment, använd ny branch/PR, skapa lokal `README.md` och `AGENTS.md`, och registrera projektet.
 5. Om användaren vill vidareutveckla ett experiment: läs dess `README.md`, `AGENTS.md` och kod först. Ändra inte andra experiment i onödan.
-6. Testa det du kan, redovisa det du inte kan testa, och ge länkar till ändringarna.
+6. Testa det du kan, redovisa det du inte kan testa, logga större arbete i `docs/ACTIVITY.md` och ge länkar till ändringarna.
 
 ## Viktiga designbeslut
 
@@ -33,10 +33,11 @@ Ett tidigt samtal handlade om Skynet, alignment, värdet av mänsklig spontanite
 - Onlinehjälpen ska vara enkel att publicera via GitHub Pages från `/docs`.
 - Projekten är oberoende av hjälpwebben och kan vara CLI-, terminal-, desktop-, spel-, webb- eller dataexperiment.
 - Enkla, stoppbara AI-/agentloopar är välkomna, men aldrig dolda oändliga processer.
+- Repoägaren vill se arbetet: använd PR-mallen, länka kodändringar och registrera nya experiment/större arbeten i `docs/ACTIVITY.md`. Den hostbara onlinehjälpen visar PR- och commitaktivitet från offentliga GitHub-API:t.
 
 ## Kopiera till nästa chatt
 
-> Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, läs projektets README.md och AGENTS.md, håll experiment isolerade, dokumentera syfte/bygge/körning och uppdatera projektkatalogen om du lägger till ett experiment. Arbeta i egen branch och PR; merge inte automatiskt.
+> Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, läs projektets README.md och AGENTS.md, håll experiment isolerade, dokumentera syfte/bygge/körning och uppdatera projektkatalogen om du lägger till ett experiment. Arbeta i egen branch och PR; dokumentera syfte, verifiering och ändringar i PR och större arbete i docs/ACTIVITY.md; merge inte automatiskt.
 
 ## Tekniska fakta
 
