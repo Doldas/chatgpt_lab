@@ -6,8 +6,8 @@ const DENSITIES = {2: .27, 3: .235, 4: .175, 5: .13};
 const presets = {
   2: {birth:[3], survive:[2,3], name:"Conway – B3/S23"},
   3: {birth:[6,7], survive:[5,6,7,8], name:"Moln – B6,7/S5–8"},
-  4: {birth:[14,15,16], survive:[12,13,14,15,16,17,18], name:"Väv – B14–16/S12–18"},
-  5: {birth:[30,31,32,33,34], survive:[27,28,29,30,31,32,33,34,35,36,37,38], name:"Eko – B30–34/S27–38"}
+  4: {birth:[14], survive:[12,13,14,15,16,17], name:"Väv – B14/S12–17"},
+  5: {birth:[30], survive:[27,28,29,30,31,32,33,34], name:"Eko – B30/S27–34"}
 };
 const neighborCache = new Map();
 const assertDimension = d => {
