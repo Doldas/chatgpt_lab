@@ -13,15 +13,16 @@ Utforska cellulära automater i 2–5 dimensioner och helt nya regelverk. Experi
 ## Arkitektur och teknik
 
 - `simulation.js`: testbar, dimensionsgenerell, DOM-fri automatsimulering.
-- `app.js`: canvas-ritning, kontroller och stoppbar tidsloop.
+- `app.js`: canvas-ritning, visningslägen, kontroller och stoppbar tidsloop.
+- `renderer.js`: DOM-fri geometri, projektion från 2–5 dimensioner och 3D-snitt. Behåll API:t testbart och låt aldrig renderaren mutera simuleringens celler.
 - `index.html`: responsiv statisk sida utan externa paket.
-- `tests/life.test.cjs`: inbyggd Node.js test-runner, inga paket att installera.
+- `tests/*.test.cjs`: inbyggd Node.js test-runner, inga paket att installera.
 
-**Bygg:** ingen byggprocess. **Kör:** öppna `index.html` eller `python3 -m http.server 8000` från repots rot. **Test:** `node --test tests/life.test.cjs`.
+**Bygg:** ingen byggprocess. **Kör:** öppna `index.html` eller `python3 -m http.server 8000` från repots rot. **Test:** `node --test tests/*.test.cjs`.
 
 ## Dimensionernas innebörd
 
-Varje cell har `3^D - 1` omedelbara grannar på en D-dimensionell torus. Allt uppdateras synkront från föregående generation. Canvas visar endast ett valt 2D-snitt; hävda inte att det är en fullständig 5D-visualisering. Dimensionalitetsbyte startar ett nytt universum för att undvika otydlig projektion av gamla tillstånd.
+Varje cell har `3^D - 1` omedelbara grannar på en D-dimensionell torus. Allt uppdateras synkront från föregående generation. GUI erbjuder ett klassiskt 2D-snitt, en projicerad hel 2D–5D-hyperkub och ett 3D-snitt. Var tydlig med att 4D/5D projiceras geometriskt, inte visas direkt som samtliga rumsliga dimensioner. 3D-snitt i högre D filtrerar W/V och muterar inte simuleringen. Dimensionalitetsbyte startar ett nytt universum för att undvika otydlig projektion av gamla tillstånd.
 
 ## Säkra ramar
 
