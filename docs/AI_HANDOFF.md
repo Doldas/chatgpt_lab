@@ -15,15 +15,15 @@ Ett tidigt samtal handlade om Skynet, alignment, värdet av mänsklig spontanite
 - `docs/` är dokumentationssubprojektet, inklusive en statisk hjälpwebb.
 - Varje **annan** toppnivåmapp är i princip ett fristående experiment. Egna språk, beroenden och byggprocesser är tillåtna.
 - `docs/projects.json` är projektkatalogens källa till sanning. Namn och antal projekt ska läsas där och verifieras mot den faktiska katalogstrukturen.
-- Respektive projekts `README.md` berättar hur det körs.
+- Varje projekt, även `docs/`, har en `README.md` med syfte, beskrivning, bygge och körning samt en egen `AGENTS.md` som förklarar hur agenter får arbeta lokalt.
 
 ## Hur du återupptar
 
 1. Anslut GitHub om det behövs. Öppna det aktuella repot och dess default branch.
 2. Läs `AGENTS.md`, `README.md`, `docs/projects.json` och detta dokument.
 3. Kontrollera aktuella branches och PR:er innan du antar något om status. Säg till om något saknas eller har förändrats.
-4. Om användaren vill skapa något: välj **ett** rimligt fristående experiment, använd ny branch/PR, dokumentera lokalt och registrera projektet.
-5. Om användaren vill vidareutveckla ett experiment: läs dess README och kod först. Ändra inte andra experiment i onödan.
+4. Om användaren vill skapa något: välj **ett** rimligt fristående experiment, använd ny branch/PR, skapa lokal `README.md` och `AGENTS.md`, och registrera projektet.
+5. Om användaren vill vidareutveckla ett experiment: läs dess `README.md`, `AGENTS.md` och kod först. Ändra inte andra experiment i onödan.
 6. Testa det du kan, redovisa det du inte kan testa, och ge länkar till ändringarna.
 
 ## Viktiga designbeslut
@@ -36,7 +36,7 @@ Ett tidigt samtal handlade om Skynet, alignment, värdet av mänsklig spontanite
 
 ## Kopiera till nästa chatt
 
-> Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, håll experiment isolerade och uppdatera projektkatalogen om du lägger till ett experiment. Arbeta i egen branch och PR; merge inte automatiskt.
+> Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, läs projektets README.md och AGENTS.md, håll experiment isolerade, dokumentera syfte/bygge/körning och uppdatera projektkatalogen om du lägger till ett experiment. Arbeta i egen branch och PR; merge inte automatiskt.
 
 ## Tekniska fakta
 
