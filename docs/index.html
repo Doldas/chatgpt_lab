@@ -109,16 +109,16 @@
         <h2 id="ai-title">En ny chatt.<br><em>Samma sammanhang.</em></h2>
         <p class="section-intro">En ny ChatGPT-konversation minns inte automatiskt vårt labb. Därför finns instruktionerna i repot, så både människor och AI kan läsa samma källa.</p>
         <ul class="read-list">
-          <li><strong>README.md</strong> <span>Vad labbet är</span></li>
-          <li><strong>AGENTS.md</strong> <span>Hur kodagenter ska arbeta</span></li>
-          <li><strong>docs/AI_HANDOFF.md</strong> <span>Överlämning till nästa konversation</span></li>
-          <li><strong>docs/projects.json</strong> <span>Vilka experiment som faktiskt finns</span></li>
+          <li><a href="https://github.com/Doldas/chatgpt_lab/blob/master/README.md" target="_blank" rel="noopener noreferrer"><strong>README.md ↗</strong></a> <span>Vad labbet är</span></li>
+          <li><a href="https://github.com/Doldas/chatgpt_lab/blob/master/AGENTS.md" target="_blank" rel="noopener noreferrer"><strong>AGENTS.md ↗</strong></a> <span>Hur kodagenter ska arbeta</span></li>
+          <li><a href="https://github.com/Doldas/chatgpt_lab/blob/master/docs/AI_HANDOFF.md" target="_blank" rel="noopener noreferrer"><strong>docs/AI_HANDOFF.md ↗</strong></a> <span>Överlämning till nästa konversation</span></li>
+          <li><a href="./projects.json"><strong>docs/projects.json ↗</strong></a> <span>Vilka experiment som faktiskt finns</span></li>
         </ul>
       </div>
       <div class="prompt-panel">
         <div class="prompt-header"><span class="prompt-lights" aria-hidden="true">● ● ●</span><span>Startprompt för nästa ChatGPT</span></div>
         <label class="sr-only" for="agent-prompt">Startprompt</label>
-        <textarea id="agent-prompt" rows="10" readonly>Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, håll experiment isolerade och uppdatera projektkatalogen om du lägger till ett experiment. Arbeta i egen branch och PR; merge inte automatiskt.</textarea>
+        <textarea id="agent-prompt" rows="10" readonly>Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, läs det valda projektets README.md och AGENTS.md, håll experiment isolerade och uppdatera projektkatalogen om du lägger till ett experiment. Arbeta i egen branch och PR; merge inte automatiskt.</textarea>
         <div class="prompt-actions"><button type="button" id="copy-prompt" class="button dark">Kopiera startprompt</button><span id="copy-status" role="status" aria-live="polite"></span></div>
       </div>
     </section>
