@@ -8,6 +8,7 @@
   <title>chatgpt_lab — Experiment, idéer & onlinehjälp</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
+  <script src="./activity.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Hoppa till innehåll</a>
@@ -20,6 +21,7 @@
       </a>
       <nav aria-label="Huvudmeny">
         <a href="#projekt">Experiment</a>
+        <a href="#aktivitet">Aktivitet</a>
         <a href="#kom-igang">Kom igång</a>
         <a href="#for-ai">För AI</a>
         <a href="https://github.com/Doldas/chatgpt_lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -75,9 +77,46 @@
       <p class="aside-note">Projektkorten läses från <a href="./projects.json">projects.json</a>. Nya projekt dyker upp här när katalogen uppdateras och publiceras.</p>
     </section>
 
+    <section id="aktivitet" class="section activity-section cream" aria-labelledby="activity-title">
+      <div class="wrap">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">02 / Öppen verkstad</p>
+            <h2 id="activity-title">Se vad vi <em>bygger.</em></h2>
+            <p class="section-intro">Här syns förslag, kodändringar och deras status direkt från GitHubs offentliga historik. Du ser det som faktiskt har publicerats i repot.</p>
+          </div>
+          <div class="activity-controls">
+            <button id="activity-refresh" class="button ghost" type="button">↻ Uppdatera aktivitet</button>
+            <span id="activity-updated" class="activity-updated"></span>
+          </div>
+        </div>
+        <p id="activity-status" class="catalog-status" role="status" aria-live="polite">Hämtar aktivitet från GitHub …</p>
+        <div class="activity-grid">
+          <section class="activity-panel" aria-labelledby="pulls-title">
+            <div class="activity-panel-header">
+              <div><span class="activity-label">FÖRSLAG</span><h3 id="pulls-title">Vad föreslås?</h3></div>
+              <a href="https://github.com/Doldas/chatgpt_lab/pulls?q=is%3Apr" target="_blank" rel="noopener noreferrer">Alla PR ↗</a>
+            </div>
+            <ul id="activity-prs" class="activity-rows"><li class="activity-empty">Läser förslag …</li></ul>
+          </section>
+          <section class="activity-panel" aria-labelledby="commits-title">
+            <div class="activity-panel-header">
+              <div><span class="activity-label">KODHISTORIK</span><h3 id="commits-title">Vad har ändrats?</h3></div>
+              <a href="https://github.com/Doldas/chatgpt_lab/commits" target="_blank" rel="noopener noreferrer">Alla commits ↗</a>
+            </div>
+            <ul id="activity-commits" class="activity-rows"><li class="activity-empty">Läser commits …</li></ul>
+          </section>
+        </div>
+        <div class="activity-footnote">
+          <p><strong>Så fungerar insynen:</strong> Klicka på ett ändringsförslag för att läsa beskrivningen, vilka filer som ändras, tester och diskussioner. GitHub-data uppdateras när du laddar om sidan eller trycker på Uppdatera. En PR eller commit visar inte en agents privata tankar eller ännu osparat arbete. För större agentinsatser finns också <a href="https://github.com/Doldas/chatgpt_lab/blob/master/docs/ACTIVITY.md" target="_blank" rel="noopener noreferrer">arbetsjournalen ↗</a>.</p>
+          <p><strong>Du bestämmer:</strong> Nya idéer ska föreslås i en PR. En människa bestämmer om de ska mergas. Ingen dold automatisk publicering.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="kom-igang" class="section cream" aria-labelledby="start-title">
       <div class="wrap">
-        <p class="eyebrow">02 / Handboken</p>
+        <p class="eyebrow">03 / Handboken</p>
         <h2 id="start-title">Kom igång<span class="accent">.</span></h2>
         <p class="section-intro">Du behöver inte lära dig ett gemensamt ramverk. Välj ett experiment och följ just dess anvisningar.</p>
         <div class="steps">
@@ -105,7 +144,7 @@
 
     <section id="for-ai" class="section wrap ai-section" aria-labelledby="ai-title">
       <div>
-        <p class="eyebrow">03 / Människa + agent</p>
+        <p class="eyebrow">04 / Människa + agent</p>
         <h2 id="ai-title">En ny chatt.<br><em>Samma sammanhang.</em></h2>
         <p class="section-intro">En ny ChatGPT-konversation minns inte automatiskt vårt labb. Därför finns instruktionerna i repot, så både människor och AI kan läsa samma källa.</p>
         <ul class="read-list">
@@ -118,7 +157,7 @@
       <div class="prompt-panel">
         <div class="prompt-header"><span class="prompt-lights" aria-hidden="true">● ● ●</span><span>Startprompt för nästa ChatGPT</span></div>
         <label class="sr-only" for="agent-prompt">Startprompt</label>
-        <textarea id="agent-prompt" rows="10" readonly>Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, läs det valda projektets README.md och AGENTS.md, håll experiment isolerade och uppdatera projektkatalogen om du lägger till ett experiment. Arbeta i egen branch och PR; merge inte automatiskt.</textarea>
+        <textarea id="agent-prompt" rows="10" readonly>Fortsätt med mitt GitHub-labb: https://github.com/Doldas/chatgpt_lab. Läs först AGENTS.md, README.md, docs/AI_HANDOFF.md och docs/projects.json på aktuell default branch. Inspektera relevanta projekt och öppna PR:er innan du ändrar något. Följ labbets projektstruktur, läs det valda projektets README.md och AGENTS.md, håll experiment isolerade och uppdatera projektkatalogen om du lägger till ett experiment. Gör arbetet granskbart: förklara avsikt, ändringar och tester i PR och för större insatser i docs/ACTIVITY.md. Arbeta i egen branch och PR; merge inte automatiskt.</textarea>
         <div class="prompt-actions"><button type="button" id="copy-prompt" class="button dark">Kopiera startprompt</button><span id="copy-status" role="status" aria-live="polite"></span></div>
       </div>
     </section>
