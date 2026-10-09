@@ -45,9 +45,10 @@ Testa att `projects.json` laddas, att projektkorten visas och kan sökas, att ko
 - `AGENTS.md`: agentregler för dokumentationssubprojektet
 - `AI_HANDOFF.md`: kontext för nya ChatGPT-sessioner
 - `PROJECT_GUIDE.md`: skapande och dokumentation av experiment
+- `validate_catalog.py`: lokal/CI-kontroll av katalogen och obligatoriska README-/AGENTS-filer
 
 Dokumentationswebben har inga externa beroenden eller API-nycklar.
 
 ## Underhåll
 
-Uppdatera `projects.json` när ett nytt experiment läggs till. Skapa inte hårdkodade projektkort i `index.html`. Om `projects.json` inte laddas visas ett tydligt felmeddelande.
+Uppdatera `projects.json` när ett nytt experiment läggs till. Kontrollera katalog och projektdokumentation från repo-roten med `python3 docs/validate_catalog.py`. GitHub Actions kör samma kontroll på PR:er och pushar till `master`. Skapa inte hårdkodade projektkort i `index.html`. Om `projects.json` inte laddas visas ett tydligt felmeddelande.
