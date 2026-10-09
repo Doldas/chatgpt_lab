@@ -21,9 +21,21 @@ chatgpt_lab/
 │   ├── projects.json          # Gemensam projektkatalog
 │   ├── AI_HANDOFF.md          # Ny ChatGPT-session börjar här
 │   └── PROJECT_GUIDE.md       # Så bygger du nästa miniprojekt
-└── meningsloshetsmaskinen/     # Experiment 001
-    ├── README.md              # Syfte, beskrivning, bygg/kör, test
-    ├── AGENTS.md              # Projektets agentinstruktioner
+├── meningsloshetsmaskinen/     # Experiment 001
+│   ├── README.md              # Syfte, beskrivning, bygg/kör, test
+│   ├── AGENTS.md              # Projektets agentinstruktioner
+│   └── index.html
+├── life-beyond-2d/           # Experiment 002: 2–5D
+│   ├── README.md
+│   ├── AGENTS.md
+│   └── index.html
+└── multidimension-life/      # Separat 2–5D regel-laboratorium
+    ├── README.md
+    ├── AGENTS.md
+    ├── engine.mjs
+    ├── engine.test.mjs
+    ├── app.js
+    ├── style.css
     └── index.html
 ```
 
@@ -34,6 +46,8 @@ chatgpt_lab/
 | Namn | Språk | Vad det är | Start |
 | --- | --- | --- | --- |
 | [Meningslöshetsmaskinen](./meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | Öppna `meningsloshetsmaskinen/index.html` |
+| [Life Beyond 2D](./life-beyond-2d/) | HTML/CSS/JavaScript | 2D–5D automat, hyperkubexperiment | Öppna `life-beyond-2d/index.html` |
+| [Life Beyond Dimensions](./multidimension-life/) | JavaScript/HTML/CSS | Fristående 2D–5D-automat med egna regler | `python3 -m http.server 8000`, öppna `/multidimension-life/` |
 
 Den maskinläsbara, fullständiga projektlistan ligger i [docs/projects.json](./docs/projects.json). Hjälpwebben läser den filen när du besöker sidan.
 

@@ -25,6 +25,18 @@
       "status": "experiment",
       "howToRun": "Öppna life-beyond-2d/index.html i webbläsaren. Inga beroenden eller byggsteg.",
       "hasLiveDemo": false
+    },
+    {
+      "id": "multidimension-life",
+      "title": "Life Beyond Dimensions",
+      "subtitle": "Game of Life i två, tre, fyra och fem dimensioner.",
+      "description": "Ett cellulärt universum där du växlar mellan 2D och 5D, utforskar skivor eller projektioner och hittar på helt egna födelse- och överlevnadsregler.",
+      "path": "multidimension-life",
+      "language": "JavaScript (ES-moduler), HTML, CSS",
+      "kind": "Cellautomatslaboratorium",
+      "status": "experiment",
+      "howToRun": "Kör python3 -m http.server 8000 från repo-roten och öppna /multidimension-life/.",
+      "hasLiveDemo": false
     }
   ]
 }
