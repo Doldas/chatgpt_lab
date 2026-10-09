@@ -76,7 +76,11 @@ Lägg till `liveUrl` (https-länk) **endast** om `hasLiveDemo` är sant. Lägg a
 3. Implementera litet och verifierbart, utan hemligheter eller tvingande beroenden för övriga projekt.
 4. Skriv **både projektets `README.md` och `AGENTS.md`**, och uppdatera `docs/projects.json`.
 5. Kör `python3 docs/validate_catalog.py` från repo-roten; kontrollera även övriga tester, länkar och dokumentation. CI validerar samma krav automatiskt på PR:er.
-6. Skicka PR på separat branch. Ange vad som är testat och inte testat.
+6. Skicka PR på separat branch. Fyll i `.github/pull_request_template.md` med vad som byggts, varför, filer, tester och nästa steg. För nya experiment eller större förändringar, lägg till en daterad post i `docs/ACTIVITY.md`. Merga inte automatiskt.
+
+## Insyn i agenternas arbete
+
+Repoägaren ska enkelt kunna se vad AI-assisterat arbete har resulterat i: den hostbara hjälpwebben har en aktivitetssektion som hämtar **offentliga PR:er och commits** från GitHub och länkar till diffar. `docs/ACTIVITY.md` kompletterar med en kort och mänskligt läsbar arbetsjournal. Den beskriver konkreta handlingar och verifierade resultat – inte privata modellresonemang eller osparat arbete.
 
 ## Specifikt för AI-loopar
 
