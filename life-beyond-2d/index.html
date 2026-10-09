@@ -2,9 +2,9 @@
 <style>
 :root{font:16px system-ui;background:#0b101a;color:#eaf0f9}*{box-sizing:border-box}body{margin:0}main{max-width:1160px;margin:auto;padding:30px 18px}h1{font-size:clamp(2rem,5vw,4rem);letter-spacing:-.055em;margin:0}p{line-height:1.5;color:#abbace}.eyebrow{color:#8fe0c9;text-transform:uppercase;letter-spacing:.15em;font-size:.72rem;font-weight:800}.panel{border:1px solid #304050;border-radius:18px;background:#131d2c;padding:19px}.layout{display:grid;grid-template-columns:300px 1fr;gap:18px;margin-top:24px}label{display:block;font-weight:680;font-size:.88rem;margin:15px 0 6px}input[type=range]{width:100%;accent-color:#84e2cd}select,button{font:inherit;color:inherit;border:1px solid #42566e;background:#202d41;border-radius:9px;padding:10px}select{width:100%}button{cursor:pointer}button:hover{background:#30425b}button.primary{background:#168c80;color:white;border-color:#168c80}button:focus-visible,input:focus-visible,select:focus-visible,canvas:focus-visible{outline:3px solid #f2b963;outline-offset:3px}.buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:20px}.world{min-width:0}canvas{display:block;width:100%;height:auto;aspect-ratio:1;max-height:680px;background:#07121d;image-rendering:pixelated;border-radius:12px;cursor:crosshair;touch-action:none}.stats{display:flex;gap:15px;flex-wrap:wrap;font-size:.84rem;color:#9eb4c8;margin-top:13px}.help{font-size:.83rem;color:#9eb4c8}.axis-line{display:grid;grid-template-columns:20px 1fr 35px;align-items:center;gap:10px}.axis-line input{margin:0}.axis-line label{margin:6px 0}.caption{font-size:.78rem}.hint{background:#0b2531;border-radius:9px;padding:11px}.footer{padding-top:25px;font-size:.8rem}a{color:#9ee7d7}
 @media(max-width:750px){.layout{grid-template-columns:1fr}.panel{padding:14px}.world{order:-1}}
-</style></head><body><main><div class="eyebrow">chatgpt_lab / experiment 002 / cellular universes</div>
+ .checkline{display:flex;align-items:center;gap:10px}.checkline input{accent-color:#84e2cd} </style></head><body><main><div class="eyebrow">chatgpt_lab / experiment 002 / cellular universes</div>
 <h1>Life Beyond 2D <span aria-hidden="true">✦</span></h1>
-<p>Vad händer när livets enkla regler får extra dimensioner? Simuleringen lever i 2–5 dimensioner. Du ser ett 2D-snitt och kan vandra längs de dolda axlarna.</p>
+<p>Vad händer när livets enkla regler får extra dimensioner? Simuleringen lever i 2–5 dimensioner. Växla mellan en roterande hyperkub utifrån, ett 3D-snitt inifrån och den klassiska 2D-ritvyn.</p>
 <div class="layout"><section class="panel" aria-label="Simuleringskontroller">
 <label for="dimensions">Dimensioner: <output id="dimension-value">2D</output></label><input id="dimensions" type="range" min="2" max="5" step="1" value="2">
 <p class="caption">Varje cell har 3<sup>D</sup> − 1 grannar: <output id="neighbors">8</output>.</p>
@@ -13,18 +13,24 @@
 <option value="echo">Echo – skala efter dimension</option>
 <option value="bloom">Bloom – mer födelse, kortlivat</option>
 <option value="crystal">Crystal – stabila kluster</option>
+<option value="evolving">Evolving – ärftliga muterande regler</option>
 </select>
 <p id="rule-description" class="help"></p>
+<label for="mutation">Mutation vid födelse: <output id="mutation-value">4%</output></label><input id="mutation" type="range" min="0" max="30" step="1" value="4"><p class="caption">I Evolving-läge ärver en ny cell en grannes regelpaket. Ibland muteras familj eller gränsvärden.</p>
 <label for="density">Täthet vid slumpstart: <output id="density-value">22%</output></label><input id="density" type="range" min="4" max="45" value="22" step="1">
 <label for="speed">Hastighet: <output id="speed-value">5</output> steg/s</label><input id="speed" type="range" min="1" max="15" value="5">
 <div id="slices"></div>
+<label for="view">Visualisering</label><select id="view"><option value="outside">Utifrån – hela hyperkuben</option><option value="slice">Inifrån – tredimensionellt snitt</option><option value="flat">Klassiskt 2D-snitt</option></select>
+<label for="rotation">Rotation i högre dimensioner: <output id="rotation-value">30°</output></label><input id="rotation" type="range" min="0" max="360" value="30" step="5">
+<label for="tilt">Luta 3D-kameran: <output id="tilt-value">25°</output></label><input id="tilt" type="range" min="-90" max="90" value="25" step="5">
+<label class="checkline"><input type="checkbox" id="edges" checked> Visa kubens kanter</label>
 <div class="buttons"><button id="start" class="primary">▶ Starta</button><button id="step">↷ Ett steg</button><button id="random">✳ Slumpstart</button><button id="clear">⌫ Rensa</button></div>
 <p class="help hint">När dimensionen ändras startas ett nytt universum med små sidlängder för att hålla beräkningen lokal och snabb. Pausa när du vill.</p>
 </section>
 <section class="panel world" aria-label="Universums tvådimensionella snitt">
 <canvas id="canvas" width="640" height="640" tabindex="0" aria-label="Klicka för att tända eller släcka celler i snittet"></canvas>
-<div class="stats"><span id="generation">Generation 0</span><span id="population">0 levande</span><span id="size">32 × 32</span><span id="slice">Snitt: x, y</span></div>
-<p class="help">Klicka eller dra för att rita i snittet. Axlarna Z, W och V flyttar snittet, inte hela universum. Kanter kopplas ihop (torus) i alla dimensioner.</p>
+<div class="stats"><span id="generation">Generation 0</span><span id="population">0 levande</span><span id="size">32 × 32</span><span id="slice">Snitt: x, y</span><span id="visible">Synliga: —</span></div>
+<p class="help" id="view-help">Utifrån: hela hyperkubens kanter och levande celler projiceras på skärmen. Inifrån: visa bara det valda 3D-snittet. 2D-snitt: rita med mus/finger. Axelreglagen Z, W, V väljer snitt. Kanterna kopplas ihop (torus) i simuleringen.</p>
 </section></div>
 <p class="footer">En begränsad, deterministisk cellulär automat: inga nätverksanrop, ingen bakgrundsagent. En öppen fråga, inte en optimalt designad organism. <a href="./README.md">Läs reglerna och bygginstruktionerna</a>.</p>
-<script src="./simulation.js"></script><script src="./app.js"></script></main></body></html>
+<script src="./simulation.js"></script><script src="./evolution.js"></script><script src="./renderer.js"></script><script src="./app.js"></script></main></body></html>
