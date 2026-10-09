@@ -13,8 +13,10 @@
 <option value="echo">Echo – skala efter dimension</option>
 <option value="bloom">Bloom – mer födelse, kortlivat</option>
 <option value="crystal">Crystal – stabila kluster</option>
+<option value="evolving">Evolving – ärftliga muterande regler</option>
 </select>
 <p id="rule-description" class="help"></p>
+<label for="mutation">Mutation vid födelse: <output id="mutation-value">4%</output></label><input id="mutation" type="range" min="0" max="30" step="1" value="4"><p class="caption">I Evolving-läge ärver en ny cell en grannes regelpaket. Ibland muteras familj eller gränsvärden.</p>
 <label for="density">Täthet vid slumpstart: <output id="density-value">22%</output></label><input id="density" type="range" min="4" max="45" value="22" step="1">
 <label for="speed">Hastighet: <output id="speed-value">5</output> steg/s</label><input id="speed" type="range" min="1" max="15" value="5">
 <div id="slices"></div>
@@ -31,4 +33,4 @@
 <p class="help" id="view-help">Utifrån: hela hyperkubens kanter och levande celler projiceras på skärmen. Inifrån: visa bara det valda 3D-snittet. 2D-snitt: rita med mus/finger. Axelreglagen Z, W, V väljer snitt. Kanterna kopplas ihop (torus) i simuleringen.</p>
 </section></div>
 <p class="footer">En begränsad, deterministisk cellulär automat: inga nätverksanrop, ingen bakgrundsagent. En öppen fråga, inte en optimalt designad organism. <a href="./README.md">Läs reglerna och bygginstruktionerna</a>.</p>
-<script src="./simulation.js"></script><script src="./renderer.js"></script><script src="./app.js"></script></main></body></html>
+<script src="./simulation.js"></script><script src="./evolution.js"></script><script src="./renderer.js"></script><script src="./app.js"></script></main></body></html>
