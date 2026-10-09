@@ -75,7 +75,7 @@ Lägg till `liveUrl` (https-länk) **endast** om `hasLiveDemo` är sant. Lägg a
 2. Skapa en unik ny mapp. Ändra inte andra experiment i onödan.
 3. Implementera litet och verifierbart, utan hemligheter eller tvingande beroenden för övriga projekt.
 4. Skriv **både projektets `README.md` och `AGENTS.md`**, och uppdatera `docs/projects.json`.
-5. Kontrollera t.ex. JSON-syntax, länkar, tester och dokumentation.
+5. Kör `python3 docs/validate_catalog.py` från repo-roten; kontrollera även övriga tester, länkar och dokumentation. CI validerar samma krav automatiskt på PR:er.
 6. Skicka PR på separat branch. Ange vad som är testat och inte testat.
 
 ## Specifikt för AI-loopar
