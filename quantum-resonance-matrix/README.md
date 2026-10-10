@@ -28,7 +28,7 @@ node --test quantum-resonance-matrix/test.mjs
 python3 docs/validate_catalog.py
 ```
 
-Node 18+ krävs bara för tester, inte för själva appen. Testerna kontrollerar gränsvärden, reproducerbarhet, amplitudgränser och frekvensområde.
+Node 18+ krävs bara för tester, inte för själva appen. Testerna kontrollerar gränsvärden, reproducerbarhet, amplitudgränser och frekvensområde. GitHub Actions kör dessutom ett verkligt Chromium-smoke-test av Canvas, reglage, start/paus, pekning, återställning och PNG-export. För att köra det lokalt med en tillfällig testinstallation i repo-roten: `npm install --no-save playwright@1.56.1`, `npx playwright install chromium`, starta HTTP-servern ovan och kör `node quantum-resonance-matrix/browser-test.cjs`. Playwright används enbart för testning och behövs inte när appen används.
 
 ## Begränsningar
 Ingen realistisk kvantfysik, ingen rumslig akustik och ingen ljudexport. Ljud kan kräva användarinteraktion och stöd för Web Audio. En visuellt korrekt rendering, pekgester, mobilprestanda och ljudåtergivning måste också kontrolleras manuellt i webbläsare. Ingen extern data, telemetri, kostnad eller automatiserad nätverksaktivitet.
