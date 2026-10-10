@@ -14,7 +14,7 @@
 - `index.html`, `style.css`: hostbar, fristående statisk webbapp.
 - Koden är kompatibel med webbläsare som stöder ES-moduler, Canvas och moderna JavaScript-funktioner.
 
-All kod som appen behöver ligger nu i `life-lab/`.
+All kod som appen behöver ligger nu i `apps/life-lab/`.
 
 ## Bygg och kör
 
@@ -26,9 +26,9 @@ Från repo-roten:
 python3 -m http.server 8000
 ```
 
-Öppna **http://localhost:8000/life-lab/**. På GitHub Pages är appens adress **https://doldas.github.io/chatgpt_lab/life-lab/** (under förutsättning att publicering sker från repo-roten).
+Öppna **http://localhost:8000/apps/life-lab/**. På GitHub Pages är appens adress **https://doldas.github.io/chatgpt_lab/apps/life-lab/** (under förutsättning att publicering sker från repo-roten).
 
-För publicering räcker det att hosta **enbart `life-lab/`** på en statisk HTTP(S)-server.
+För publicering räcker det att hosta **enbart `apps/life-lab/`** på en statisk HTTP(S)-server.
 
 ## GUI och funktioner
 
@@ -52,11 +52,11 @@ De två motorerna har olika rutnätsstorlekar och regler, så **byte av regelvä
 ## Tester
 
 - Kör befintliga tester:
-  - `node --test life-lab/tests/*.test.cjs` (originalmotor, integration, genetik, rendering).
-  - `node life-lab/tests/engine.test.mjs` (egna B/S-regler).
+  - `node --test apps/life-lab/tests/*.test.cjs` (originalmotor, integration, genetik, rendering).
+  - `node apps/life-lab/tests/engine.test.mjs` (egna B/S-regler).
   - `python3 docs/validate_catalog.py` (projektstruktur).
 - Testa även manuellt i webbläsare: byt dimensioner/regler, prova båda kameralägen och 2D-målning, start/paus, mutation och felsvar för ogiltiga B/S-regler.
 
 ## Historiska projekt
 
-**`life-lab/` är den enda kvarvarande Game of Life-applikationen.** Gamla mappar är borttagna efter att deras motorer och tester flyttats hit; tidigare versioner finns i Git-historiken.
+**`apps/life-lab/` är den enda kvarvarande Game of Life-applikationen.** Gamla mappar är borttagna efter att deras motorer och tester flyttats hit; tidigare versioner finns i Git-historiken.
