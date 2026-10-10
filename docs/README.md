@@ -22,8 +22,8 @@ python3 -m http.server 8000
 
 Repoägaren har aktiverat GitHub Pages. När webbplatsen publiceras från **master / (root)** nås resurserna på följande adresser:
 
-- [Meningslöshetsmaskinen](https://doldas.github.io/chatgpt_lab/meningsloshetsmaskinen/) – bekräftad av repoägaren.
-- [Life Lab](https://doldas.github.io/chatgpt_lab/life-lab/) – motsvarande appadress enligt samma rotstruktur.
+- [Meningslöshetsmaskinen](https://doldas.github.io/chatgpt_lab/apps/meningsloshetsmaskinen/) – bekräftad av repoägaren.
+- [Life Lab](https://doldas.github.io/chatgpt_lab/apps/life-lab/) – motsvarande appadress enligt samma rotstruktur.
 - [Dokumentation och projektkatalog](https://doldas.github.io/chatgpt_lab/docs/) – onlinehjälpen ligger i `docs/`.
 
 GitHub Pages-konfigurationen ska vara **Deploy from a branch → master → /(root)** om både appmappar och dokumentationen ska kunna nås direkt. Använd **inte /docs** som Pages-publiceringsrot i detta läge, eftersom länkar till apparna annars inte publiceras via samma plats.

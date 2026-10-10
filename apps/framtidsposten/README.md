@@ -11,8 +11,8 @@ Python **3.9+**, endast standardbiblioteket. **Ingen installation eller byggning
 Från repo-roten:
 
 ```sh
-python3 framtidsposten/stamps.py "kaffe efter midnatt"
-python3 framtidsposten/stamps.py "kaffe efter midnatt" --antal 3
+python3 apps/framtidsposten/stamps.py "kaffe efter midnatt"
+python3 apps/framtidsposten/stamps.py "kaffe efter midnatt" --antal 3
 ```
 
 Texten är ett frö: samma indata ger samma märke på samma Python-version. `--antal` är begränsat till 1–20 och skapar en numrerad följd av frön. Varje frö har högst 200 Unicode-tecken. Spara gärna terminalutskriften som ett litet konstverk.

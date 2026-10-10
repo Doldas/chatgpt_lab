@@ -6,7 +6,7 @@ Detta är **labbets bestående kontext** för nya ChatGPT-/kodagent-konversation
 Ett nyfiket, språkoberoende samlingsrepo för små separata experiment. Idéer får vara konstiga, konstnärliga eller helt utan praktiskt värde. Agenten får föreslå och utforska, men ska respektera mänskligt ägarskap och kontroll. **Ingen självstyrande evighetsloop**: varje experiment med en loop ska vara stoppbart och ha tydliga gränser.
 
 ## Arkitektur
-- Varje vanlig mapp direkt under repo-roten är ett fristående experiment/miniprojekt, t.ex. `meningsloshetsmaskinen/`.
+- Varje mapp direkt under apps/ är ett fristående experiment/miniprojekt, t.ex. `meningsloshetsmaskinen/`.
 - `docs/` är ett **separat dokumentationssubprojekt** och den statiska onlinehjälpen (undantag från experimentregeln).
 - Rotens `README.md` är den mänskliga entrén.
 - `docs/projects.json` är katalogens **enda centrala lista** över experiment och driver dokumentationswebbens projektkort.

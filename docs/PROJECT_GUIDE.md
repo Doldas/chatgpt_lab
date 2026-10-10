@@ -6,30 +6,26 @@ Det här är en gemensam guide för människor och framtida AI-agenter. Inga obl
 
 ```text
 chatgpt_lab/
-├── README.md                 # Startpunkt för människor
-├── AGENTS.md                 # Startpunkt för AI-agenter
-├── docs/                     # Dokumentationssubprojekt, onlinehjälp
-│   ├── index.html
-│   ├── styles.css
-│   ├── app.js
-│   ├── projects.json         # En gemensam projektkatalog
+├── README.md
+├── AGENTS.md
+├── docs/
+│   ├── projects.json
 │   ├── README.md
-│   ├── AGENTS.md
-│   ├── AI_HANDOFF.md
-│   └── PROJECT_GUIDE.md
-├── meningsloshetsmaskinen/    # Experiment 001
-│   ├── README.md
-│   ├── AGENTS.md
-│   └── index.html
-└── mitt-nya-experiment/       # Nästa oberoende miniprojekt
-    ├── README.md
-    ├── AGENTS.md
-    └── ...                   # Valfria språk/filer
+│   └── AGENTS.md
+└── apps/
+    ├── meningsloshetsmaskinen/
+    │   ├── README.md
+    │   ├── AGENTS.md
+    │   └── index.html
+    └── mitt-nya-experiment/
+        ├── README.md
+        ├── AGENTS.md
+        └── ...
 ```
 
 ## Krav per miniprojekt
 
-Varje ny toppnivåmapp för ett experiment ska ha **både `README.md` och `AGENTS.md`**. Dokumentationssubprojektet `docs/` följer samma krav.
+Varje ny mapp under apps/ för ett experiment ska ha **både `README.md` och `AGENTS.md`**. Dokumentationssubprojektet `docs/` följer samma krav.
 
 `README.md` måste förklara:
 
@@ -60,7 +56,7 @@ Uppdatera `docs/projects.json`, som innehåller `schemaVersion`, `repository` oc
 | `title` | sträng | Projektets namn |
 | `subtitle` | sträng | Kort rubrik |
 | `description` | sträng | Vad det gör |
-| `path` | sträng | Toppnivåmappen, t.ex. `mitt-nya-experiment` |
+| `path` | sträng | Mapp under apps/, t.ex. `apps/mitt-nya-experiment` |
 | `language` | sträng | Språk eller stack |
 | `kind` | sträng | T.ex. `Webb`, `CLI`, `Spel`, `Konst` |
 | `status` | sträng | T.ex. `experiment`, `prototyp`, `stabil` |
@@ -72,7 +68,7 @@ Lägg till `liveUrl` (https-länk) **endast** om `hasLiveDemo` är sant. Lägg a
 ## Arbetsflöde
 
 1. Läs aktuella instruktioner och projektkatalogen.
-2. Skapa en unik ny mapp. Ändra inte andra experiment i onödan.
+2. Skapa en unik ny mapp under `apps/`. Ändra inte andra experiment i onödan.
 3. Implementera litet och verifierbart, utan hemligheter eller tvingande beroenden för övriga projekt.
 4. Skriv **både projektets `README.md` och `AGENTS.md`**, och uppdatera `docs/projects.json`.
 5. Kör `python3 docs/validate_catalog.py` från repo-roten; kontrollera även övriga tester, länkar och dokumentation. CI validerar samma krav automatiskt på PR:er.
@@ -88,4 +84,4 @@ Sätt en stoppknapp, säker maxgräns för varje körning och tydlig information
 
 ## GitHub Pages
 
-Onlinehjälpen är ett eget statiskt subprojekt i `docs/` och kan serveras från repo-inställningarna (branch `master`, folder `/docs`). Att lägga till experiment på rotnivå betyder **inte** automatiskt att deras appar hostas på GitHub Pages.
+Onlinehjälpen är ett eget statiskt subprojekt i `docs/` och kan serveras från repo-inställningarna (branch `master`, folder `/docs`). Att lägga till experiment under apps/ betyder **inte** automatiskt att deras appar hostas på GitHub Pages.

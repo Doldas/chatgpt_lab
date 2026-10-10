@@ -2,7 +2,7 @@ name: Quantum Resonance Matrix tests
 on:
   pull_request:
     paths:
-      - 'quantum-resonance-matrix/**'
+      - 'apps/quantum-resonance-matrix/**'
       - '.github/workflows/quantum-resonance-matrix.yml'
   workflow_dispatch:
 jobs:
@@ -14,12 +14,12 @@ jobs:
         with:
           node-version: '22'
       - name: Unit tests
-        run: node --test quantum-resonance-matrix/test.mjs
+        run: node --test apps/quantum-resonance-matrix/test.mjs
       - name: Syntax check
         run: |
-          node --check quantum-resonance-matrix/app.mjs
-          node --check quantum-resonance-matrix/core.mjs
-          node --check quantum-resonance-matrix/browser-test.cjs
+          node --check apps/quantum-resonance-matrix/app.mjs
+          node --check apps/quantum-resonance-matrix/core.mjs
+          node --check apps/quantum-resonance-matrix/browser-test.cjs
   browser:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -40,4 +40,4 @@ jobs:
           python3 -m http.server 8000 --bind 127.0.0.1 > /tmp/quantum-http.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid" 2>/dev/null || true' EXIT
-          node quantum-resonance-matrix/browser-test.cjs
+          node apps/quantum-resonance-matrix/browser-test.cjs

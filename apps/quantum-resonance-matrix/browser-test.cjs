@@ -7,7 +7,7 @@ const {chromium} = require('playwright');
   const page = await browser.newPage({acceptDownloads:true, viewport:{width:1280,height:900}});
   const errors=[];
   page.on('pageerror', e=>errors.push(e.message));
-  await page.goto('http://127.0.0.1:8000/quantum-resonance-matrix/',{waitUntil:'load'});
+  await page.goto('http://127.0.0.1:8000/apps/quantum-resonance-matrix/',{waitUntil:'load'});
   await page.locator('#field').waitFor();
   await page.waitForFunction(()=>document.querySelector('#field').getContext('2d').getImageData(360,270,1,1).data[3]===255);
   assert.equal(await page.locator('#state').innerText(),'PAUSAD');
