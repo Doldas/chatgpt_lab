@@ -51,6 +51,18 @@
       "status": "experiment",
       "howToRun": "Kör python3 framtidsposten/stamps.py 'kaffe efter midnatt' i terminalen.",
       "hasLiveDemo": false
+    },
+    {
+      "id": "quantum-resonance-matrix",
+      "title": "Quantum Resonance Matrix",
+      "subtitle": "En interferensväv att röra vid och lyssna på.",
+      "description": "Interaktivt audiovisuellt instrument med klassiska stående vågor, reglage, ringpulser, valfri Web Audio och PNG-export. Inspirerat av resonans, inte en kvantmekanisk solver.",
+      "path": "quantum-resonance-matrix",
+      "language": "HTML5 Canvas, CSS, JavaScript ES modules",
+      "kind": "Audiovisuellt vågexperiment",
+      "status": "experiment",
+      "howToRun": "Starta python3 -m http.server 8000 från repo-roten och öppna /quantum-resonance-matrix/ i webbläsaren.",
+      "hasLiveDemo": false
     }
   ]
 }

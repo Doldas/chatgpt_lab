@@ -58,3 +58,18 @@ Fyll i PR-mallen för **alla** PR:er. Lägg till en daterad post här för stör
 - **Verifiering:** GitHub Actions [Framtidsposten tests, körning 1](https://github.com/Doldas/chatgpt_lab/actions/runs/37981827294) (enhetstester och CLI-smoke-test) **success**; [Validate lab documentation, körning 31](https://github.com/Doldas/chatgpt_lab/actions/runs/37981827097) **success**. Lokal körning kunde inte göras eftersom körmiljön inte kunde slå upp github.com; terminalrendering inte visuellt verifierad.
 - **Gränser:** Ingen nätverkstrafik, inga skrivningar eller bakgrundsjobb. Högst 20 märken per körning. Unicode-typografi kan se olika ut i olika terminaler.
 - **Granskning:** Branch `experiment/framtidsposten-20261009`; repoägaren avgör merge. Ingen publik demo utlovad.
+
+## 2026-10-10 – Quantum Resonance Matrix
+
+- **Varför:** Förverkliga en idé från Gemini (utan GitHub-åtkomst) som ett lekfullt visuellt och musikaliskt våginstrument.
+- **Vad och var:** Ett fristående experiment i `quantum-resonance-matrix/` med Canvas, fyra klassiska stående sinusmoder, tre paletter, stoppbara ringpulser, frivilligt Web Audio-ljud och PNG-export. Egen README, AGENTS och matematiska Node-tester; en post i `docs/projects.json`.
+- **Verifiering:** [Quantum Resonance Matrix CI #1](https://github.com/Doldas/chatgpt_lab/actions/runs/38045509136) **success** (Node-enhetstester och syntaxkontroll); [katalogvalidering #34](https://github.com/Doldas/chatgpt_lab/actions/runs/38045509067) **success** och [Life Lab #14](https://github.com/Doldas/chatgpt_lab/actions/runs/38045509065) **success**. Visuella webbläsar- och ljudtester är inte genomförda.
+- **Gränser:** Inte realistisk kvantfysik. Inga externa anrop eller kostnader, högst åtta ringar, explicit ljudstart och stopp vid dold flik.
+- **Granskning:** Separat branch `experiment/quantum-resonance-matrix-20261010`; människa avgör merge och publicering.
+
+## 2026-10-10 – Quantum Resonance Matrix: riktiga webbläsarkontroller
+
+- **Varför:** Tidigare CI verifierade matematik och syntax men inte att kontrollerna fungerade i en webbläsare.
+- **Vad:** `quantum-resonance-matrix/browser-test.cjs` använder Playwright/Chromium enbart i testmiljö; PR-workflowen kör en separat `browser`-job med lokal HTTP-server och tydlig cleanup. Projekt-README beskriver reproduktion.
+- **Verifiering:** [GitHub Actions #4](https://github.com/Doldas/chatgpt_lab/actions/runs/38046091611): både `test` och `browser` **success**, inklusive PNG-download, Canvas, reglage, pekning, start/paus och återställning. Katalogvalidering och övriga kontroller körs på PR.
+- **Kvar:** Hörbar ljudkvalitet, tillgänglighet och mobila pekgester har inte testats manuellt. CI hämtar Playwright och Chromium vid testkörningen; appen har fortsatt noll externa beroenden.
