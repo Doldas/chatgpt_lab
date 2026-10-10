@@ -7,7 +7,7 @@ En liten ljudlek: tänk om regn kunde spela en pentatonisk melodi? Klicka på en
 HTML, CSS och JavaScript med Canvas 2D och Web Audio. Inga paket, externa resurser, nätverksanrop, konton eller kostnader. Ingen byggprocess behövs.
 
 ## Kör
-Öppna `index.html` direkt i en modern webbläsare, eller kör `python3 -m http.server 8000` från repo-roten och besök `http://localhost:8000/regnorkestern/`.
+Öppna `index.html` direkt i en modern webbläsare, eller kör `python3 -m http.server 8000` från repo-roten och besök `http://localhost:8000/apps/regnorkestern/`.
 
 ## Kontroller
 - Klicka eller tryck på ytan för en droppe. Tangentbord: fokusera ytan och tryck Enter eller mellanslag för en droppe i mitten.
@@ -20,4 +20,4 @@ HTML, CSS och JavaScript med Canvas 2D och Web Audio. Inga paket, externa resurs
 Ingen inspelning eller sparad historik. Web Audio-stöd krävs för ljud, men bilden fungerar separat. Högst 48 ringar och 12 samtidiga toner; varje ton tar slut inom 1,2 sekunder. Animationen stannar när ringarna försvunnit. Dold flik stoppar regn, toner och animation. Minskad rörelse respekteras genom stillastående ringar. Ingen publik demo är verifierad för denna branch.
 
 ## Testning
-`node --check regnorkestern/app.js` kontrollerar syntax och `python3 docs/validate_catalog.py` kontrollerar projektregistreringen. Kontrollera även start/stopp, 60-droppsgränsen, tangentbord, ljud, rensa och dold flik i webbläsare. Genomförda kontroller redovisas i PR.
+`node --check apps/regnorkestern/app.js` kontrollerar syntax och `python3 docs/validate_catalog.py` kontrollerar projektregistreringen. Kontrollera även start/stopp, 60-droppsgränsen, tangentbord, ljud, rensa och dold flik i webbläsare. Genomförda kontroller redovisas i PR.
