@@ -7,37 +7,35 @@
       "title": "Meningslöshetsmaskinen",
       "subtitle": "Kasta färg utan att försöka lyckas.",
       "description": "Ett lekfullt experiment med en vit målarduk, slumpstyrda färgfläckar och en avsiktligt stoppbar loop.",
-      "path": "meningsloshetsmaskinen",
+      "path": "apps/meningsloshetsmaskinen",
       "language": "HTML, CSS, JavaScript",
       "kind": "Kreativt webblabb",
       "status": "experiment",
-      "howToRun": "Öppna https://doldas.github.io/chatgpt_lab/meningsloshetsmaskinen/ direkt i webbläsaren.",
-      "hasLiveDemo": true,
-      "liveUrl": "https://doldas.github.io/chatgpt_lab/meningsloshetsmaskinen/"
+      "howToRun": "Öppna https://doldas.github.io/chatgpt_lab/apps/meningsloshetsmaskinen/ direkt i webbläsaren.",
+      "hasLiveDemo": false
     },
     {
       "id": "life-lab",
       "title": "Life Lab — Unified",
       "subtitle": "Ett samlat Game of Life-labb i 2–5 dimensioner.",
       "description": "Enda Game of Life-appen: Conway, egna B/S-regler, Echo, Bloom, Crystal, mutationer och 3D–5D-hyperkubprojektion. Alla motorer finns i life-lab.",
-      "path": "life-lab",
+      "path": "apps/life-lab",
       "language": "JavaScript ES modules, HTML, CSS",
       "kind": "Cellautomatslaboratorium",
       "status": "experiment",
-      "howToRun": "Öppna https://doldas.github.io/chatgpt_lab/life-lab/ direkt i webbläsaren.",
-      "hasLiveDemo": true,
-      "liveUrl": "https://doldas.github.io/chatgpt_lab/life-lab/"
+      "howToRun": "Öppna https://doldas.github.io/chatgpt_lab/apps/life-lab/ direkt i webbläsaren.",
+      "hasLiveDemo": false
     },
     {
       "id": "regnorkestern",
       "title": "Regnorkestern",
       "subtitle": "Låt regnet improvisera en melodi.",
       "description": "En nattblå vattenyta med klickbara ringar, valfria pentatoniska toner och ett stoppbart regn med högst 60 droppar.",
-      "path": "regnorkestern",
+      "path": "apps/regnorkestern",
       "language": "HTML, CSS, JavaScript",
       "kind": "Visuellt ljudexperiment",
       "status": "experiment",
-      "howToRun": "Öppna regnorkestern/index.html i en modern webbläsare. Ingen installation behövs.",
+      "howToRun": "Öppna apps/regnorkestern/index.html i en modern webbläsare. Ingen installation behövs.",
       "hasLiveDemo": false
     },
     {
@@ -45,11 +43,11 @@
       "title": "Framtidsposten",
       "subtitle": "Frimärken från platser som ännu inte finns.",
       "description": "En deterministisk poetisk postmyndighet som trycker terminalfrimärken av ett textfrö, med egna platser, motiv och absurda poststämplar.",
-      "path": "framtidsposten",
+      "path": "apps/framtidsposten",
       "language": "Python 3.9+",
       "kind": "Generativ terminalkonst",
       "status": "experiment",
-      "howToRun": "Kör python3 framtidsposten/stamps.py 'kaffe efter midnatt' i terminalen.",
+      "howToRun": "Kör python3 apps/framtidsposten/stamps.py 'kaffe efter midnatt' i terminalen.",
       "hasLiveDemo": false
     },
     {
@@ -57,11 +55,11 @@
       "title": "Quantum Resonance Matrix",
       "subtitle": "En interferensväv att röra vid och lyssna på.",
       "description": "Interaktivt audiovisuellt instrument med klassiska stående vågor, reglage, ringpulser, valfri Web Audio och PNG-export. Inspirerat av resonans, inte en kvantmekanisk solver.",
-      "path": "quantum-resonance-matrix",
+      "path": "apps/quantum-resonance-matrix",
       "language": "HTML5 Canvas, CSS, JavaScript ES modules",
       "kind": "Audiovisuellt vågexperiment",
       "status": "experiment",
-      "howToRun": "Starta python3 -m http.server 8000 från repo-roten och öppna /quantum-resonance-matrix/ i webbläsaren.",
+      "howToRun": "Starta python3 -m http.server 8000 från repo-roten och öppna /apps/quantum-resonance-matrix/ i webbläsaren.",
       "hasLiveDemo": false
     }
   ]
