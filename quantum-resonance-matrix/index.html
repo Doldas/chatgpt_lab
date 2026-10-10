@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quantum Resonance Matrix · vågor att röra vid</title><link rel="stylesheet" href="./style.css"></head>
+<body><main>
+<header><div class="eyebrow">EXPERIMENT / 005 · WAVE ATLAS</div><h1>Quantum<br><em>Resonance</em> Matrix</h1>
+<p>En levande interferensväv. Rör vid den, böj frekvenserna och lyssna på mönstret.</p></header>
+<section class="layout" aria-label="Resonanslaboratorium">
+<div class="stage"><canvas id="field" width="720" height="540" aria-label="Animerat våginterferensfält. Klicka eller dra för att lägga till en resonanspunkt."></canvas>
+<div class="stage-foot"><span id="state">PAUSAD</span><span>STÅENDE VÅGOR · 4 MODER</span><span id="fps">720 × 540</span></div></div>
+<aside class="panel"><h2>Laboratoriet</h2>
+<label>Frekvens <output id="frequency-value">1.00×</output><input id="frequency" type="range" min="0.2" max="3" step="0.05" value="1"></label>
+<label>Koppling <output id="coupling-value">0.50</output><input id="coupling" type="range" min="0" max="1" step="0.01" value=".5"></label>
+<label>Fas <output id="phase-value">0.00</output><input id="phase" type="range" min="0" max="6.28" step=".01" value="0"></label>
+<label>Färgkarta <select id="palette"><option value="aurora">Aurora</option><option value="ember">Glöd</option><option value="mono">Monokrom</option></select></label>
+<div class="actions"><button id="toggle" class="primary">▶ Starta</button><button id="reset">↺ Återställ</button></div>
+<button id="sound" aria-pressed="false">♫ Aktivera ljud</button><button id="save">↓ Spara PNG</button>
+<p class="hint">Klicka och dra i fältet för att placera upp till åtta pulser. Ljud är alltid av från början och stängs när du pausar eller lämnar fliken.</p>
+<p class="hint"><strong>Vetenskaplig not:</strong> En konstnärlig superposition av klassiska stående sinusvågor, inte en lösning till Schrödingerekvationen.</p>
+</aside></section>
+<footer>INTERNETFRITT · INGA PAKET · INGEN TELEMETRI <span>∞ / STOPPBAR</span></footer></main>
+<script type="module" src="./app.mjs"></script></body></html>
