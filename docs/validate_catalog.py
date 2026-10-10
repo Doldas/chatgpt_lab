@@ -19,7 +19,7 @@ REQUIRED_FIELDS = (
     "language", "kind", "status", "howToRun",
 )
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-EXCLUDED_ROOT_DIRS = {"docs"}  # Docs is a separate subproject, not a catalog entry.
+APPS = ROOT / "apps"  # Experiments are direct children of apps/.
 
 
 def check() -> list[str]:
@@ -47,10 +47,10 @@ def check() -> list[str]:
 
     actual_dirs = {
         item.name
-        for item in ROOT.iterdir()
+        for item in APPS.iterdir()
         if item.is_dir()
         and not item.name.startswith(".")
-        and item.name not in EXCLUDED_ROOT_DIRS
+        
     }
     seen_ids: set[str] = set()
     seen_paths: set[str] = set()
@@ -72,8 +72,8 @@ def check() -> list[str]:
         else:
             seen_ids.add(project_id)
 
-        if not isinstance(path, str) or not SLUG.fullmatch(path):
-            problems.append(f"{label}.path must be a single kebab-case directory")
+        if not isinstance(path, str) or not path.startswith("apps/") or not SLUG.fullmatch(path[5:]):
+            problems.append(f"{label}.path must be apps/<kebab-case-directory>")
             continue
         if path in seen_paths:
             problems.append(f"Duplicate project path: {path}")
@@ -98,9 +98,9 @@ def check() -> list[str]:
         elif "liveUrl" in entry:
             problems.append(f"{label}.liveUrl must be absent when hasLiveDemo=false")
 
-    for path in sorted(actual_dirs - seen_paths):
+    for path in sorted(actual_dirs - {p[5:] for p in seen_paths}):
         problems.append(f"Experiment directory lacks catalog entry: {path}")
-    for path in sorted(seen_paths - actual_dirs):
+    for path in sorted({p[5:] for p in seen_paths} - actual_dirs):
         problems.append(f"Catalog entry has no matching experiment directory: {path}")
     return problems
 
