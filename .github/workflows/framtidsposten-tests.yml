@@ -16,6 +16,6 @@ jobs:
         with:
           python-version: '3.11'
       - name: Unit tests
-        run: python3 -m unittest discover -s framtidsposten -p 'test_*.py' -v
+        run: python3 -m unittest discover -s apps/framtidsposten -p 'test_*.py' -v
       - name: Smoke test
         run: python3 apps/framtidsposten/stamps.py "ett brev till igår" --antal 2
