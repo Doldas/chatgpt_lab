@@ -28,4 +28,4 @@ Läs repo-rotens [AGENTS.md](../AGENTS.md) och denna mapps [README.md](./README.
 - Skriv transparensnoteringar i `ACTIVITY.md` för större arbete. Förklara att offentliga GitHub-händelser **inte** är en direktvy av agentens interna resonemang eller osparade arbete.
 
 ## När ett nytt projekt läggs till
-Kräv en egen mapp på rotnivå, `README.md` med bygg- och körinstruktioner, samt `AGENTS.md` med agenternas regler. Lägg sedan till en rad i `projects.json`. Ändra normalt inte hjälpsajtens HTML.
+Kräv en egen mapp under apps/, `README.md` med bygg- och körinstruktioner, samt `AGENTS.md` med agenternas regler. Lägg sedan till en rad i `projects.json`. Ändra normalt inte hjälpsajtens HTML.
