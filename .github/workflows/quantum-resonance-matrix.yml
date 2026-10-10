@@ -1,0 +1,21 @@
+name: Quantum Resonance Matrix tests
+on:
+  pull_request:
+    paths:
+      - 'quantum-resonance-matrix/**'
+      - '.github/workflows/quantum-resonance-matrix.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests
+        run: node --test quantum-resonance-matrix/test.mjs
+      - name: Syntax check
+        run: |
+          node --check quantum-resonance-matrix/app.mjs
+          node --check quantum-resonance-matrix/core.mjs
