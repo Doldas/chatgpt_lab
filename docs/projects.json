@@ -11,7 +11,7 @@
       "language": "HTML, CSS, JavaScript",
       "kind": "Kreativt webblabb",
       "status": "experiment",
-      "howToRun": "Öppna https://doldas.github.io/chatgpt_lab/apps/meningsloshetsmaskinen/ direkt i webbläsaren.",
+      "howToRun": "Kör python3 -m http.server 8000 i repo-roten och öppna http://localhost:8000/apps/meningsloshetsmaskinen/.",
       "hasLiveDemo": false
     },
     {
@@ -23,7 +23,7 @@
       "language": "JavaScript ES modules, HTML, CSS",
       "kind": "Cellautomatslaboratorium",
       "status": "experiment",
-      "howToRun": "Öppna https://doldas.github.io/chatgpt_lab/apps/life-lab/ direkt i webbläsaren.",
+      "howToRun": "Kör python3 -m http.server 8000 i repo-roten och öppna http://localhost:8000/apps/life-lab/.",
       "hasLiveDemo": false
     },
     {

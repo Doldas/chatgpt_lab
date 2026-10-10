@@ -23,14 +23,21 @@ chatgpt_lab/
 
 ## Experiment
 
-| Namn | Språk | Vad det är | Start |
+Alla appar finns i [apps/](./apps/) och har egen README och AGENTS. Här är hela katalogen:
+
+| App | Teknik | Vad den gör | Starta lokalt |
 | --- | --- | --- | --- |
-| [Meningslöshetsmaskinen](./apps/meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | Kör lokalt i `apps/meningsloshetsmaskinen/` |
-| **[Life Lab — Unified](./apps/life-lab/)** | JavaScript/HTML/CSS | **Gemensam app: egna regler, mutation och hyperkub i 2D–5D** | Kör lokalt i `apps/life-lab/` |
+| [Meningslöshetsmaskinen](./apps/meningsloshetsmaskinen/) | HTML/CSS/JS | Lekfull Canvas-konst med stoppbar slump-loop och PNG-export | `/apps/meningsloshetsmaskinen/` |
+| [Life Lab](./apps/life-lab/) | HTML/CSS/JS | Game of Life i 2–5D, egna regler, mutation och hyperkubprojektion | `/apps/life-lab/` |
+| [Regnorkestern](./apps/regnorkestern/) | HTML/CSS/JS, Web Audio | Ringar och pentatoniska toner, ljud som aktivt tillval | `/apps/regnorkestern/` |
+| [Framtidsposten](./apps/framtidsposten/) | Python 3.9+ | Frimärken från omöjliga platser i terminalen | `python3 apps/framtidsposten/stamps.py "hej"` |
+| [Quantum Resonance Matrix](./apps/quantum-resonance-matrix/) | HTML5 Canvas, JS, Web Audio | Interferensfält med reglage, ringpulser och valfritt ljud | `/apps/quantum-resonance-matrix/` |
 
-Den maskinläsbara, fullständiga projektlistan ligger i [docs/projects.json](./docs/projects.json). Hjälpwebben läser den filen när du besöker sidan.
+Webbadresserna ovan avser en **lokal server** på `http://localhost:8000`, inte verifierade GitHub Pages-demos. Starta webbservern från repo-roten med `python3 -m http.server 8000`.
 
-**Rekommenderat Game of Life-projekt:** [Life Lab — Unified](./apps/life-lab/). De tidigare Game of Life-mapparna är borttagna; deras motorer och tester ligger nu direkt i Life Lab.
+[**Appöversikt, kör- och testkommandon**](./apps/README.md) · [Maskinläsbar projektkatalog](./docs/projects.json)
+
+**Game of Life:** [Life Lab](./apps/life-lab/) är labbets enda aktiva Game of Life-app.
 
 ## Onlinehjälp: hostbar webbplats
 
