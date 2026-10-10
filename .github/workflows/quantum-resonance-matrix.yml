@@ -19,3 +19,25 @@ jobs:
         run: |
           node --check quantum-resonance-matrix/app.mjs
           node --check quantum-resonance-matrix/core.mjs
+          node --check quantum-resonance-matrix/browser-test.cjs
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test-only browser harness
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Browser smoke test
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 > /tmp/quantum-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          node quantum-resonance-matrix/browser-test.cjs
