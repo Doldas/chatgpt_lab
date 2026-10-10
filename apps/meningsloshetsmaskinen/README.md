@@ -29,7 +29,7 @@ En fristående webbsida där du kan kasta färg på en vit Canvas, måla med mus
 python3 -m http.server 8000
 ```
 
-Öppna sedan **http://localhost:8000/meningsloshetsmaskinen/**.
+Öppna sedan **http://localhost:8000/apps/meningsloshetsmaskinen/**.
 
 ## Så använder du experimentet
 
