@@ -73,3 +73,10 @@ Fyll i PR-mallen för **alla** PR:er. Lägg till en daterad post här för stör
 - **Vad:** `quantum-resonance-matrix/browser-test.cjs` använder Playwright/Chromium enbart i testmiljö; PR-workflowen kör en separat `browser`-job med lokal HTTP-server och tydlig cleanup. Projekt-README beskriver reproduktion.
 - **Verifiering:** [GitHub Actions #4](https://github.com/Doldas/chatgpt_lab/actions/runs/38046091611): både `test` och `browser` **success**, inklusive PNG-download, Canvas, reglage, pekning, start/paus och återställning. Katalogvalidering och övriga kontroller körs på PR.
 - **Kvar:** Hörbar ljudkvalitet, tillgänglighet och mobila pekgester har inte testats manuellt. CI hämtar Playwright och Chromium vid testkörningen; appen har fortsatt noll externa beroenden.
+
+## 2026-10-10 – Apparna samlade under apps/
+
+- **Vad:** Flyttade alla fem kompletta experimentträd från repo-roten till `apps/` med Git-träd (filhistoriken bevaras). `docs/` ligger kvar i roten; projektkatalogen, tester, länkar och agentinstruktioner uppdateras i PR #18.
+- **Varför:** Tydligare separation mellan applikationer och dokumentation.
+- **Verifiering:** Katalogvalidering och projektens GitHub Actions kontrolleras på PR. Tidigare publicerade URL:er ska inte markeras verifierade förrän de nya adresserna testats.
+- **Merge:** Människan beslutar, ingen automatisk merge.
