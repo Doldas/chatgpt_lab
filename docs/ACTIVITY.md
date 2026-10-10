@@ -80,3 +80,10 @@ Fyll i PR-mallen för **alla** PR:er. Lägg till en daterad post här för stör
 - **Varför:** Tydligare separation mellan applikationer och dokumentation.
 - **Verifiering:** Katalogvalidering och projektens GitHub Actions kontrolleras på PR. Tidigare publicerade URL:er ska inte markeras verifierade förrän de nya adresserna testats.
 - **Merge:** Människan beslutar, ingen automatisk merge.
+
+## 2026-10-10 – Dokumentationsinventering av alla fem appar
+
+- **Vad:** Kontrollerade att alla fem appar har README och AGENTS, skapade `apps/README.md` som gemensam startpunkt, kompletterade rotens README med alla fem och rättade körbeskrivningarna i `docs/projects.json` där overifierade Pages-adresser visades som körväg.
+- **Varför:** Göra apparna lättare att hitta och prova efter flytten till `apps/`, utan att lova publicerade demos.
+- **Verifiering:** Katalogvalideringen körs i PR-CI. Manuella webbläsar- och ljudtester ingår inte i denna dokumentationsändring.
+- **Granskning:** Separat PR, ingen automatisk merge.
