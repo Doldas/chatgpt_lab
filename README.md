@@ -10,19 +10,13 @@ Här får idéer undersökas, lekas med och byggas till små projekt — ibland 
 chatgpt_lab/
 ├── README.md
 ├── AGENTS.md
-├── docs/                     # Dokumentation och onlinehjälp
-├── meningsloshetsmaskinen/    # Konstexperiment
-└── life-lab/                 # Enda Game of Life-appen
-    ├── README.md
-    ├── AGENTS.md
-    ├── index.html
-    ├── app.mjs
-    ├── engine.mjs
-    ├── simulation.js
-    ├── evolution.js
-    ├── renderer.js
-    ├── style.css
-    └── tests/
+├── docs/                        # Documentation and project catalog
+└── apps/
+    ├── meningsloshetsmaskinen/
+    ├── life-lab/
+    ├── regnorkestern/
+    ├── framtidsposten/
+    └── quantum-resonance-matrix/
 ```
 
 **Regel:** Varje ny mapp under apps/ för ett experiment har en egen `README.md` och `AGENTS.md`. `docs/` är dokumentationssubprojektet och följer samma dokumentationskrav, men listas inte som experiment i katalogen.
@@ -31,8 +25,8 @@ chatgpt_lab/
 
 | Namn | Språk | Vad det är | Start |
 | --- | --- | --- | --- |
-| [Meningslöshetsmaskinen](./apps/meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | [Öppna live](https://doldas.github.io/chatgpt_lab/apps/meningsloshetsmaskinen/) |
-| **[Life Lab — Unified](./apps/life-lab/)** | JavaScript/HTML/CSS | **Gemensam app: egna regler, mutation och hyperkub i 2D–5D** | [Öppna live](https://doldas.github.io/chatgpt_lab/apps/life-lab/) |
+| [Meningslöshetsmaskinen](./apps/meningsloshetsmaskinen/) | HTML/CSS/JavaScript | Färgfläckar utan prestationsmål och en stoppbar slump-loop | Kör lokalt i `apps/meningsloshetsmaskinen/` |
+| **[Life Lab — Unified](./apps/life-lab/)** | JavaScript/HTML/CSS | **Gemensam app: egna regler, mutation och hyperkub i 2D–5D** | Kör lokalt i `apps/life-lab/` |
 
 Den maskinläsbara, fullständiga projektlistan ligger i [docs/projects.json](./docs/projects.json). Hjälpwebben läser den filen när du besöker sidan.
 
@@ -50,7 +44,7 @@ python3 -m http.server 8000
 
 Öppna sedan **http://localhost:8000/docs/**. Se [docs/README.md](./docs/README.md) för publicering via GitHub Pages, andra hostar och felsökning.
 
-**GitHub Pages är aktiverat.** Med publicering från repo-roten är webbapparnas adresser [Meningslöshetsmaskinen](https://doldas.github.io/chatgpt_lab/apps/meningsloshetsmaskinen/) och [Life Lab](https://doldas.github.io/chatgpt_lab/apps/life-lab/). Dokumentationssajten nås då på [webbhjälpen under /docs/](https://doldas.github.io/chatgpt_lab/docs/).
+**Efter merge och driftsättning** ligger webapparna under `/apps/<projektnamn>/`. De nya publika adresserna är ännu inte verifierade, så kontrollera GitHub Pages innan de markeras som live i katalogen. Dokumentationen ligger fortsatt under `/docs/`.
 
 ## Skapa ett nytt experiment
 
