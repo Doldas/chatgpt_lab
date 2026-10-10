@@ -1,0 +1,32 @@
+name: One-shot migrate experiments into apps
+on:
+  push:
+    branches:
+      - refactor/group-experiments-under-apps-20261010
+    paths:
+      - '.github/migrate_apps_once.py'
+      - '.github/workflows/one-shot-apps-migration.yml'
+permissions:
+  contents: write
+jobs:
+  move:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: One-shot migration and validation
+        run: python3 .github/migrate_apps_once.py
+      - name: Commit on PR branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Move all experiments into apps and update references"
+          git push origin HEAD:refactor/group-experiments-under-apps-20261010
