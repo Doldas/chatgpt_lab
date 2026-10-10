@@ -58,3 +58,11 @@ Fyll i PR-mallen för **alla** PR:er. Lägg till en daterad post här för stör
 - **Verifiering:** GitHub Actions [Framtidsposten tests, körning 1](https://github.com/Doldas/chatgpt_lab/actions/runs/37981827294) (enhetstester och CLI-smoke-test) **success**; [Validate lab documentation, körning 31](https://github.com/Doldas/chatgpt_lab/actions/runs/37981827097) **success**. Lokal körning kunde inte göras eftersom körmiljön inte kunde slå upp github.com; terminalrendering inte visuellt verifierad.
 - **Gränser:** Ingen nätverkstrafik, inga skrivningar eller bakgrundsjobb. Högst 20 märken per körning. Unicode-typografi kan se olika ut i olika terminaler.
 - **Granskning:** Branch `experiment/framtidsposten-20261009`; repoägaren avgör merge. Ingen publik demo utlovad.
+
+## 2026-10-10 – Quantum Resonance Matrix
+
+- **Varför:** Förverkliga en idé från Gemini (utan GitHub-åtkomst) som ett lekfullt visuellt och musikaliskt våginstrument.
+- **Vad och var:** Ett fristående experiment i `quantum-resonance-matrix/` med Canvas, fyra klassiska stående sinusmoder, tre paletter, stoppbara ringpulser, frivilligt Web Audio-ljud och PNG-export. Egen README, AGENTS och matematiska Node-tester; en post i `docs/projects.json`.
+- **Verifiering:** Automatiska Node-tester och katalogvalidering körs i PR-CI; faktiska resultat dokumenteras i PR. Visuella webbläsar- och ljudtester är inte ännu genomförda.
+- **Gränser:** Inte realistisk kvantfysik. Inga externa anrop eller kostnader, högst åtta ringar, explicit ljudstart och stopp vid dold flik.
+- **Granskning:** Separat branch `experiment/quantum-resonance-matrix-20261010`; människa avgör merge och publicering.
