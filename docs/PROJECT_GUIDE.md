@@ -29,7 +29,7 @@ chatgpt_lab/
 
 ## Krav per miniprojekt
 
-Varje ny toppnivåmapp för ett experiment ska ha **både `README.md` och `AGENTS.md`**. Dokumentationssubprojektet `docs/` följer samma krav.
+Varje ny mapp under apps/ för ett experiment ska ha **både `README.md` och `AGENTS.md`**. Dokumentationssubprojektet `docs/` följer samma krav.
 
 `README.md` måste förklara:
 
@@ -88,4 +88,4 @@ Sätt en stoppknapp, säker maxgräns för varje körning och tydlig information
 
 ## GitHub Pages
 
-Onlinehjälpen är ett eget statiskt subprojekt i `docs/` och kan serveras från repo-inställningarna (branch `master`, folder `/docs`). Att lägga till experiment på rotnivå betyder **inte** automatiskt att deras appar hostas på GitHub Pages.
+Onlinehjälpen är ett eget statiskt subprojekt i `docs/` och kan serveras från repo-inställningarna (branch `master`, folder `/docs`). Att lägga till experiment under apps/ betyder **inte** automatiskt att deras appar hostas på GitHub Pages.
