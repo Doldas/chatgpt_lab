@@ -1,11 +1,11 @@
 # AGENTS.md – Life Lab (gemensamt experiment)
 
-Läs [README.md](./README.md), [../AGENTS.md](../AGENTS.md), och den aktuella koden här innan ändring.
+Läs [README.md](./README.md), [../../AGENTS.md](../../AGENTS.md), och den aktuella koden här innan ändring.
 
 ## Syfte och arbetsområde
 Den här mappen är den **gemensamma användarapplikationen** för båda Game of Life-experimenten, med 2–5D, egna regelverk, ärftlig mutation och hyperkubprojektioner.
 
-Ändra normalt endast `life-lab/` och katalogposten i `docs/projects.json` om dess metadata behöver uppdateras. De tidigare experimentmapparna har tagits bort; återskapa dem inte av misstag. Gör alla ändringar på separat branch/PR.
+Ändra normalt endast `apps/life-lab/` och katalogposten i `../../docs/projects.json` om dess metadata behöver uppdateras. De tidigare experimentmapparna har tagits bort; återskapa dem inte av misstag. Gör alla ändringar på separat branch/PR.
 
 ## Motorer och begränsningar
 - `app.mjs` importerar `./engine.mjs` som ES-modul och `./simulation.js` som globalt skript.
@@ -15,8 +15,8 @@ Den här mappen är den **gemensamma användarapplikationen** för båda Game of
 - Evolving-mutationer ska ske endast vid födsel och vara ärftliga; skriv matematik och begränsningar i README när den ändras.
 
 ## Bygg, kör, testa
-- **Bygg:** ingen. **Kör:** `python3 -m http.server 8000` från repo-roten, besök `http://localhost:8000/life-lab/`. En kopia av enbart `life-lab/` kan köras på en statisk HTTP-server.
-- **Test:** `node --test life-lab/tests/*.test.cjs`, `node life-lab/tests/engine.test.mjs`, `python3 docs/validate_catalog.py`.
+- **Bygg:** ingen. **Kör:** `python3 -m http.server 8000` från repo-roten, besök `http://localhost:8000/apps/life-lab/`. En kopia av enbart `apps/life-lab/` kan köras på en statisk HTTP-server.
+- **Test:** `node --test apps/life-lab/tests/*.test.cjs`, `node apps/life-lab/tests/engine.test.mjs`, `python3 docs/validate_catalog.py`.
 - Kontrollera användarens styrning över paus, max 80 auto-steg, stopp när fliken döljs, val av dimension och regler, och ogiltiga egna B/S-värden.
 - Inga dolda bakgrundsjobb, externa API:er, insamlad data, hemligheter eller okontrollerade kostnader.
 - Dokumentera testutfall och begränsningar i PR, låt människan avgöra merge.
